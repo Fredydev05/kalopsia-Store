@@ -9,8 +9,6 @@ body {
   font-family: "Arial", sans-serif;
   margin: 0;
   background-color: #000000;
-  border-bottom: 1px solid #585757;
-  /*filter: grayscale(100%);*/
   overflow-x: hidden;
 }
 
@@ -25,7 +23,7 @@ body {
   color: #fff;
   background: transparent;
   box-sizing: border-box;
-  box-shadow: 0px 2px 12px rgba(0, 0, 0, 0.11); /* Sombra */
+  box-shadow: 0px 2px 12px rgba(0, 0, 0, 0.604); 
   backdrop-filter: blur(4px);
 }
 
@@ -35,7 +33,7 @@ body {
   font-family: "Poppins", sans-serif;
   font-size: 13px;
 }
-.nav-links p{
+.nav-links p {
   margin-bottom: 0;
 }
 .nav-links p a {
@@ -43,6 +41,7 @@ body {
   text-decoration: none;
   position: relative;
   transition: color 0.3s ease;
+  outline: none;
 }
 
 .nav-links p a::after {
@@ -85,9 +84,8 @@ body {
   cursor: pointer;
   color: white;
 }
-
-html {
-  scroll-behavior: smooth;
+.menu-btn:focus {
+  outline: none;
 }
 
 .logo,
@@ -106,8 +104,6 @@ html {
   margin-left: 0.6rem;
   position: relative;
 }
-
-
 
 /*nuestros productos*/
 .bienvenida {
@@ -129,7 +125,7 @@ html {
       #e0dfdf00 0%,
       rgba(0, 0, 0, 0.884) 89%
     ),
-    url("img/visuales/Walppaper.jpeg");
+    url("../img/visuales/Walppaper.jpeg");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -138,8 +134,6 @@ html {
 
 .div-h2 {
   padding: 5rem 4rem;
-  /* background-color: #000000cc; */
-  backdrop-filter: blur(4px);
   border-top-right-radius: 10px;
   border-bottom-right-radius: 10px;
 }
@@ -250,6 +244,7 @@ html {
   text-decoration: none;
   position: relative;
   transition: font-size 0.3s ease-in-out, letter-spacing 0.3s ease-in-out;
+  outline: none;
 }
 
 .secciones p a::after {
@@ -295,7 +290,7 @@ html {
       rgba(0, 0, 0, 0.822),
       rgba(0, 0, 0, 0.658)
     ),
-    url("img/visuales/Walppaper.jpeg");
+    url("../img/visuales/Walppaper.jpeg");
   background-size: cover;
 }
 
@@ -371,7 +366,7 @@ html {
 
 .whatsapp-btn button:hover {
   background-color: #1ebe5b;
-  box-shadow: 5px 5px 12px #13a00f;
+  box-shadow: 0px 0px 18px #17c112;
   scale: 1.07;
 }
 
@@ -386,20 +381,51 @@ html {
   text-align: center;
   position: relative;
   max-width: 1000px;
-  margin: 0 auto;
+  margin: 0 0;
   overflow: hidden;
   animation: autoShow2 both;
   animation-timeline: view(80% 5%);
 }
 
-.carousel-inner,
-.carousel-inner-2,
 .carousel-inner-3 {
   display: flex;
   width: 400%;
   flex-wrap: nowrap;
   transition: transform 1s ease-in-out;
 }
+.carousel-inner{
+  display: flex;
+  flex-wrap: nowrap;
+  transition: transform 1s ease-in-out;
+  width: 600%;
+}
+/* .carousel-inner-2{
+  display: flex;
+  flex-wrap: nowrap;
+  width: 600%;
+  transition: transform 1s ease-in-out;
+
+} */
+
+
+.carousel-inner-2 {
+  display: flex;
+  transition: transform 1s ease-in-out;
+  width: 100%; /* Mantén un ancho flexible */
+}
+
+.carousel-item-2 {
+  flex: 0 0 100%; /* Cada imagen ocupa el 100% del carrusel en móvil */
+  max-width: 100%; /* Limita el ancho al contenedor */
+  box-sizing: border-box;
+}
+
+.carousel-item-2 img {
+  width: 100%; /* Imagen escala con el contenedor */
+  height: auto;
+  object-fit: cover; /* Asegura que la imagen mantenga su proporción */
+}
+
 
 .carousel-item,
 .carousel-item-2,
@@ -431,7 +457,7 @@ html {
   display: inline-block;
   width: 8px;
   height: 8px;
-  margin: 0 5px;
+  margin: 0 2px;
   background-color: rgba(255, 255, 255, 0.5);
   border-radius: 50%;
   cursor: pointer;
@@ -485,7 +511,7 @@ html {
   text-align: center;
   background-color: #f5f5f5;
   filter: grayscale(100%);
-  background-image: url("img/visuales/navbarimg.jpg");
+  background-image: url("../img/visuales/download\ \(1\).jpeg");
   background-size: cover;
   background-attachment: fixed;
   background-position: center;
@@ -521,7 +547,8 @@ html {
   padding: 50px;
   text-align: left;
   background-color: #000000;
-  background-image: url("img/visuales/Walppaper.jpeg");
+  background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.5), black),
+    url("../img/visuales/Walppaper.jpeg");
 }
 
 .info {
@@ -550,7 +577,6 @@ html {
 
 .contact-info {
   list-style: none;
-  padding: 0;
   margin: 0;
 }
 
@@ -633,20 +659,56 @@ footer {
   font-family: "Poppins", sans-serif;
   color: #fff;
   padding: 10px;
-  text-align: center;
+  padding: 0px 7rem;
+  display: flex;
+  font-size: 14px;
+  border-top: 1px solid white;
+  justify-content: space-between;
 }
-
+footer p {
+  padding: 0px 10px;
+}
 footer p a {
   text-decoration: none;
   font-family: "Poppins", sans-serif;
   color: white;
-  padding-left: 25px;
+  padding-left: 16px;
+  position: relative;
+}
+footer p a:focus {
+  outline: none;
+}
+
+footer p a::after {
+  content: "";
+  position: absolute;
+  bottom: -3px;
+  width: 85%;
+  height: 2px;
+  border-bottom: 2px solid #868686;
+  left: 16px;
+  scale: 0;
+  transition: 0.3s;
+}
+
+footer p a:hover:after {
+  scale: 100%;
+}
+
+footer p a:hover {
+  color: #868686;
+}
+
+.footer-info {
+  width: fit-content;
+  display: flex;
+  justify-content: space-between;
 }
 
 .whatsapp-float {
   position: fixed;
-  width: 60px;
-  height: 60px;
+  width: 50px;
+  height: 50px;
   bottom: 20px;
   right: 20px;
   background-color: #636363;
@@ -659,8 +721,8 @@ footer p a {
 }
 
 .whatsapp-float img {
-  width: 45px;
-  padding-top: 12px;
+  width: 35px;
+  padding-top: 11px;
   filter: grayscale(100%);
 }
 
@@ -678,14 +740,14 @@ footer p a {
   bottom: 10px;
   background-color: #838383b0;
   color: #fff;
-  padding: 10px 15px;
+  padding: 8px 13px;
   border-radius: 20px;
   box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.2);
   opacity: 0;
   transform: translateX(100%);
   transition: all 0.5s ease;
   white-space: nowrap;
-  font-size: 14px;
+  font-size: 13px;
   z-index: 90;
 }
 
@@ -710,12 +772,17 @@ footer p a {
     display: block;
   }
 
-  .carousel-item img,
-  .carousel-item-2 img {
-    width: 70%;
-    height: 100%;
-    display: block;
-    object-fit: cover;
+  .carousel-section,
+  .carousel-section-2,
+  .carousel-section-3 {
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+    padding: 0;
+    padding-top: 3rem;
+    padding-bottom: 4rem;
+    background-size: cover;
+    border-radius: 0;
   }
 
   .carousel-title {
@@ -749,28 +816,6 @@ footer p a {
     box-shadow: none;
   }
 
-  @keyframes slideDown {
-    0% {
-      transform: translateY(-20px);
-      opacity: 0;
-    }
-    100% {
-      transform: translateY(0);
-      opacity: 1;
-    }
-  }
-
-  @keyframes slideUp {
-    0% {
-      transform: translateY(0);
-      opacity: 1;
-    }
-    100% {
-      transform: translateY(-20px);
-      opacity: 0;
-    }
-  }
-
   .menu-btn {
     display: block;
     margin-left: auto;
@@ -788,15 +833,13 @@ footer p a {
     padding: 1rem;
     border: 2px solid white;
     border-right: 0;
+    font-size: 15px;
   }
 
-  .nav-links.mobile-visible {
-    display: flex;
-    animation: slideDown 1s ease forwards;
+  .nav-links p a::after{
+    display: none;
   }
-  .nav-links.mobile-hidden {
-    animation: slideUp 1s ease forwards;
-  }
+
   .nav-links p {
     margin-bottom: 1rem;
   }
@@ -820,31 +863,31 @@ footer p a {
         #00000093 0%,
         rgba(0, 0, 0, 0.804) 100%
       ),
-      url("img/visuales/Walppaper.jpeg ");
+      url("../img/visuales/Walppaper.jpeg ");
     background-size: cover;
     padding-left: 0;
     padding-top: 0;
     padding-bottom: 1.5rem;
     mask-image: linear-gradient(rgba(0, 0, 0) 60%, transparent);
   }
-  .line{
+  .line {
     position: relative;
     background: black;
     border-radius: 10px;
-    margin-bottom: 3.5rem;
   }
 
-  @property --angle{
+  @property --angle {
     syntax: "<angle>";
     initial-value: 0deg;
     inherits: false;
   }
-  .line::after, .line::before{
-    content: '';
+  .line::after,
+  .line::before {
+    content: "";
     position: absolute;
     width: 100%;
     height: 100%;
-    background-image: conic-gradient(from var(--angle),transparent 80%, white);
+    background-image: conic-gradient(from var(--angle), transparent 80%, white);
     top: 50%;
     left: 50%;
     translate: -50% -50%;
@@ -853,13 +896,14 @@ footer p a {
     border-radius: 10px;
     animation: 3s spin linear infinite;
   }
-  .line::before{
+  .line::before {
     filter: blur(1.5rem);
   }
   @keyframes spin {
-    from{
+    from {
       --angle: 0deg;
-    }to{
+    }
+    to {
       --angle: 360deg;
     }
   }
@@ -869,8 +913,8 @@ footer p a {
     position: relative;
   }
 
-  .secciones::before{
-    content: '';
+  .secciones::before {
+    content: "";
     position: absolute;
     width: 80%;
     height: 10%;
@@ -882,10 +926,10 @@ footer p a {
     padding: 0rem 3.5rem;
     max-width: 100%;
     border-radius: 10px;
-    margin-bottom: 3rem;
-    top: -10%;
+    backdrop-filter: none;
     background-color: rgba(0, 0, 0, 0);
-    align-items: center;
+    position: relative;
+    top: -5%;
   }
 
   .nuestros-productos h2 {
@@ -946,8 +990,14 @@ footer p a {
   }
 
   .carousel-item img,
-  .carousel-item-2 img,
   .carousel-item-3 img {
+    width: 70%;
+    height: 100%;
+    display: block;
+    object-fit: cover;
+  }
+
+  .carousel-item-2 img{
     width: 70%;
     height: 100%;
     display: block;
@@ -996,6 +1046,7 @@ footer p a {
 
   .carousel-indicators {
     margin: 0;
+    max-width: 100%;
   }
 
   .carousel {
@@ -1029,9 +1080,12 @@ footer p a {
   }
 
   /* Sección sobre nosotros y contacto */
+  .section-about{
+    padding: 100px 30px;
+  }
   .section-about p,
   .section-contact p {
-    font-size: 16px;
+    font-size: 14px;
   }
 
   .section-contact {
@@ -1056,13 +1110,23 @@ footer p a {
     font-size: 14px;
   }
 
+  footer {
+    padding: 0;
+    flex-direction: column;
+    align-items: center;
+  }
   footer p {
     font-size: 14px;
+    flex-wrap: wrap;
+  }
+
+  .footer-info > * {
+    margin-top: 0;
   }
 }
 
 @media screen and (max-width: 380px) {
   .section-contact {
-    padding: 0;
+    padding: 0px;
   }
 }
