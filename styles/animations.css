@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 .titulo-navbar {
   animation: tracking-in-contract 2s ease-in-out;
 }
@@ -294,3 +295,301 @@
     opacity: 1;
   }
 }
+=======
+.titulo-navbar {
+  animation: tracking-in-contract 2s ease-in-out;
+}
+@keyframes tracking-in-contract {
+  0% {
+    letter-spacing: 0.6em;
+    opacity: 0;
+  }
+  40% {
+    opacity: 0.6;
+  }
+  75% {
+    letter-spacing: -0.2rem;
+    opacity: 1;
+  }
+  100% {
+    letter-spacing: normal;
+  }
+}
+
+.nuestros-productos {
+  animation: blur-in 2.7s ease-in-out;
+}
+@keyframes blur-in {
+  0% {
+    filter: blur(12px);
+    opacity: 0;
+  }
+  100% {
+    filter: blur(0);
+    opacity: 1;
+  }
+}
+
+.nuestros-productos h2 {
+  -webkit-animation: tracking-in-expand 2s cubic-bezier(0.215, 0.61, 0.355, 1)
+    both;
+  animation: tracking-in-expand 2s cubic-bezier(0.215, 0.61, 0.355, 1) both;
+}
+
+/* rotacion y opacidad del logo   */
+
+@keyframes rotateCircle {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+@keyframes autoShow{
+  from{
+    opacity: 0;
+    transform: translateX(-200px) ;
+  }to{
+    opacity: 1;
+    transform: translateX(0) ;
+  }
+}
+
+@keyframes tamanio {
+  from{
+    width: 0%;
+    height: 0%;
+  }to{
+    width: 30%;
+    height: 10%;
+  }
+}
+/* section about and contact show  */
+
+@keyframes autoShow2{
+  from{
+    opacity: 0;
+    transform: translateY(200px) scale(0.3) ;
+  }to{
+    opacity: 1;
+    transform: translateY(0) scale(1) ;
+  }
+}
+
+@-webkit-keyframes tracking-in-expand {
+  0% {
+    letter-spacing: -0.5em;
+    opacity: 0;
+  }
+  40% {
+    opacity: 0.6;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes tracking-in-expand {
+  0% {
+    letter-spacing: -0.5em;
+    opacity: 0;
+  }
+  40% {
+    opacity: 0.6;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.nuestros-productos ul li {
+  margin: 0.5rem;
+  padding: 1rem 0.2rem;
+  font-weight: bold;
+  font-size: 20px;
+  opacity: 0;
+  transform: translateX(-100%);
+  animation: slide-in 1s ease-in-out forwards;
+}
+
+@keyframes slide-in {
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+/* Añadir retraso a cada lista */
+
+.nuestros-productos ul li:nth-child(1) {
+  animation-delay: 0.3s;
+}
+
+.nuestros-productos ul li:nth-child(2) {
+  animation-delay: 0.6s;
+}
+
+.nuestros-productos ul li:nth-child(3) {
+  animation-delay: 0.9s;
+}
+
+.nuestros-productos ul li:nth-child(4) {
+  animation-delay: 1.2s;
+}
+
+.nuestros-productos li a:hover {
+  transform: scale(1.1);
+  color: gray;
+  transition: transform 0.3s ease-in-out, color 0.3s ease-in-out;
+}
+
+@keyframes show {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 0.5;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.carousel-section,
+.carousel-section-2,
+.carousel-section-3 {
+  view-timeline-name: --carousel;
+  view-timeline-axis: block;
+
+  animation-timeline: --carousel;
+  animation-name: show;
+  animation-range: entry 0% cover 40%;
+
+  animation-fill-mode: both;
+}
+
+.us-image {
+  view-timeline-name: --carousel;
+  view-timeline-axis: block;
+
+  animation-timeline: --carousel;
+  animation-name: show;
+  animation-range: entry 0% cover 30%;
+
+  animation-fill-mode: both;
+}
+
+
+@media screen and (max-width: 768px) {
+  .titulo-navbar{
+    animation: none;
+  }
+  
+}
+/* decoracion del logo, sin uso
+.titulo-navbar::before {
+  content: "";
+  position: absolute;
+  left: -7px;
+  width: 17%;
+  height: 35%;
+  border-top: 1.5px solid rgb(255, 255, 255);
+  border-left: 1.5px solid rgb(255, 255, 255);
+  top: 5px;
+}
+
+.titulo-navbar::after {
+  content: "";
+  position: absolute;
+  right: 0;
+  width: 39%;
+  height: 1px;
+  border-bottom: 1.5px solid rgb(255, 255, 255);
+  bottom: 7px;
+}*/
+
+
+/* Animation of menu buttons */
+
+.nav-links.mobile-visible {
+  display: flex;
+	-webkit-animation: scale-in-ver-top 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+	        animation: scale-in-ver-top 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+}
+.nav-links.mobile-hidden {
+  display: flex;
+	-webkit-animation: scale-out-ver-top 0.4s cubic-bezier(0.550, 0.085, 0.680, 0.530) both;
+	        animation: scale-out-ver-top 0.4s cubic-bezier(0.550, 0.085, 0.680, 0.530) both;
+}
+
+/* Animacion de entrada boton menu */
+
+ @-webkit-keyframes scale-in-ver-top {
+  0% {
+    -webkit-transform: scaleY(0);
+            transform: scaleY(0);
+    -webkit-transform-origin: 100% 0%;
+            transform-origin: 100% 0%;
+    opacity: 1;
+  }
+  100% {
+    -webkit-transform: scaleY(1);
+            transform: scaleY(1);
+    -webkit-transform-origin: 100% 0%;
+            transform-origin: 100% 0%;
+    opacity: 1;
+  }
+}
+@keyframes scale-in-ver-top {
+  0% {
+    -webkit-transform: scaleY(0);
+            transform: scaleY(0);
+    -webkit-transform-origin: 100% 0%;
+            transform-origin: 100% 0%;
+    opacity: 1;
+  }
+  100% {
+    -webkit-transform: scaleY(1);
+            transform: scaleY(1);
+    -webkit-transform-origin: 100% 0%;
+            transform-origin: 100% 0%;
+    opacity: 1;
+  }
+}
+
+/* Animacion de salida boton menu */
+
+
+ @-webkit-keyframes scale-out-ver-top {
+  0% {
+    -webkit-transform: scaleY(1);
+            transform: scaleY(1);
+    -webkit-transform-origin: 100% 0%;
+            transform-origin: 100% 0%;
+    opacity: 1;
+  }
+  100% {
+    -webkit-transform: scaleY(0);
+            transform: scaleY(0);
+    -webkit-transform-origin: 100% 0%;
+            transform-origin: 100% 0%;
+    opacity: 1;
+  }
+}
+@keyframes scale-out-ver-top {
+  0% {
+    -webkit-transform: scaleY(1);
+            transform: scaleY(1);
+    -webkit-transform-origin: 100% 0%;
+            transform-origin: 100% 0%;
+    opacity: 1;
+  }
+  100% {
+    -webkit-transform: scaleY(0);
+            transform: scaleY(0);
+    -webkit-transform-origin: 100% 0%;
+            transform-origin: 100% 0%;
+    opacity: 1;
+  }
+}
+>>>>>>> 0197b46 (New updates and add translate options)

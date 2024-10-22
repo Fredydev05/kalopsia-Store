@@ -1,0 +1,51 @@
+{
+    "Section-menu-nav": {
+      "Productos": "<i class='bi bi-cart3'> Productos",
+      "Nosotros": "<i class='bi bi-person'> Nosotros",
+      "Contacto": "<i class='bi bi-telephone'> Contacto"
+    },
+    "Nuestros-productos": {
+      "Bienvenida": "Bienvenido a Kalopsia",
+      "Pregunta": "¿Que te gustaria ver?",
+      "Jarroncitos": "Jarroncitos",
+      "Tazas": "Tazas",
+      "Otros": "Otros"
+    },
+    "us": {
+      "who": "¿Quienes somos?",
+      "text-info": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci alias minus provident qui mollitia architecto iure possimus saepe perspiciatis ea commodi aut doloribus, laudantium exercitationem et, veritatis natus iste accusantium?"
+    },
+    "carousel-section": {
+      "Nombre": "☆⋆｡Jarroncitos°‧★",
+      "descripcion": "Diseños personalizables",
+      "button": "<i class='bi bi-whatsapp'></i> Hacer Pedido"
+    },
+    "carousel-section-2": {
+      "Nombre": "☆⋆｡Tazas°‧★",
+      "descripcion": "Tazas (con o sin cuchara), diseños personalizables",
+      "button": "<i class='bi bi-whatsapp'></i> Hacer Pedido"
+    },
+    "carousel-section-3": {
+      "Nombre": "☆⋆｡Otros Productos°‧★",
+      "descripcion": "Descripcion de otro producto",
+      "button": "<i class='bi bi-whatsapp'></i> Hacer Pedido"
+    },
+    "about": {
+      "title": "Sobre Nosotros",
+      "about-us": "Kalopsia Store es tu tienda de confianza para productos de calidad.Nuestro objetivo es ofrecer lo mejor para nuestros clientes. Lorem ipsumdolor sit amet consectetur adipisicing elit. Cum architecto excepturivel molestias, modi eos perspiciatis dicta, quidem, esse asperiores impedit magnam corporis deserunt beatae dignissimos id unde. Delectus, saepe! Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed idnisi neque et, quisquam, ratione, alias fugiat eos similique aliquam quae dolores aspernatur facere. Facilis exercitationem quia corporis voluptatibus fugit? Lorem, ipsum dolor sit amet consectetur adipisicing elit. Porro, ullam quas. Dolore asperiores, qui culpa blanditiis numquam veniam soluta quisquam! Quisquam reprehenderit nam nostrum alias dolor nihil ex nemo consequatur."
+    },
+    "Contact": {
+      "Contactos": "Contactos: ",
+      "texto-info": "Podes contactarnos a través de los siguientes medios:",
+      "texto-info-2": "O danos más informacion:"
+    },
+    "footer": {
+      "copyright": "&copy; Derechos reservados 2024 | Kalopsia Store",
+      "main": "<i class='bi bi-house-up'> Inicio"
+    },
+    "whatsapp-float": {
+      "float-message": "¡Chatea con Nosotros!"
+    }
+    
+  }
+  
