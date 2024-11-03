@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="keywords"
+      content=" kalopsia, store, sublimados, tazas, personalizados, tienda de sublimado, 
+    sublimacion, jarroncitos, CDE, sublimados cde, Tazas personalizadas, tazas con diseño, tienda de personalizados cde
+    tazas cde"
+    />
+    <meta name="copyright" content="Copyright © Kalopsia Store" />
+    <meta
+      name="description"
+      content="☆⋆｡Productos sublimados personalizados°‧★"
+    />
+    <meta http-equiv="X-UA-Compatible" content="IE=7" />
+    <meta name="author" content="Fredy.dev" />
+    <title>Kalopsia Store - mas informacion</title>
+    <link rel="stylesheet" href="./styles/info.css" />
+    <link rel="icon" href="./img/logo/Kal-removebg-preview.png" />
+    <link rel="stylesheet" href="./styles/style.css" />
+    <link rel="stylesheet" href="./styles/animations.css" />
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
+    />
+    <script
+      src="https://kit.fontawesome.com/c794a947dc.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <div class="wrapper-main">
+      <header>
+        <div class="nav-bar">
+          <div class="logo">
+            <a href="https://www.instagram.com/kalop_store/" target="_blank">
+              <img
+                src="img/logo/Kal-removebg-preview.png"
+                alt=""
+                height="50px"
+                width="50px"
+              />
+            </a>
+          </div>
+          <p class="titulo-navbar">Kalopsia Store</p>
+
+          <button class="menu-btn" onclick="toggleMenu()">
+            &#9776;<!--<i class="bi bi-list"></i>-->
+          </button>
+          <div class="nav-links" id="navLinks">
+            <p>Idioma:</p>
+            <div class="lang-responsive">
+              <button class="lang-pt" data-pt="pt">
+                <img src="img/visuales/32px-Flag_of_Brazil.svg.png" alt="" />
+              </button>
+              <button class="lang-pt" data-pt="py">
+                <img src="img/visuales/64px-Flag_of_Paraguay.svg.png" alt="" />
+              </button>
+            </div>
+            <span>|</span>
+            <p>
+              <a
+                href="#products"
+                data-section="Section-menu-nav"
+                data-value="Productos"
+                ><i class="bi bi-cart3"></i> Productos</a
+              >
+            </p>
+            <p>
+              <a
+                href="#about"
+                data-section="Section-menu-nav"
+                data-value="Nosotros"
+                ><i class="bi bi-person"></i> Nosotros</a
+              >
+            </p>
+            <p>
+              <a
+                href="#contact"
+                data-section="Section-menu-nav"
+                data-value="Contacto"
+                ><i class="bi bi-telephone"></i> Contacto</a
+              >
+            </p>
+          </div>
+        </div>
+      </header>
+      <main>
+        <div class="more-info-wrapper">
+          <h1 class="info-title">Text of product</h1>
+          <p class="info-desc">
+            More information about the product and some custom info, how it can
+            design it or some shi like that, mas texto para ver el tamaño del
+            center text Lorem ipsum dolor, sit amet consectetur adipisicing
+            elit. Nulla ea eveniet asperiores nemo nobis beatae, voluptate error
+            laboriosam magnam voluptas dignissimos explicabo vel quas maiores
+            saepe rerum dolorum corporis eos.
+          </p>
+          <div class="wrapper-images">
+            <img
+              src="./img/productos/jarroncitos/jarroncito gibili 2.jpg"
+              alt="cant found img"
+              class="zoomable"
+            />
+          </div>
+          <div id="imageModal" class="modal" onclick="cerrarModal()">
+            <img id="modalImage" class="modal-content" alt="Zoom Image" />
+          </div>
+        </div>
+      </main>
+
+      <footer id="footer">
+        <p data-section="footer" data-value="copyright">
+          &copy; Derechos reservados 2024 | Kalopsia Store
+        </p>
+        <div class="footer-social-link">
+          <p>
+            <a href="https://www.instagram.com/kalop_store/"
+              ><i class="fa-brands fa-instagram"></i
+            ></a>
+          </p>
+          <p>
+            <a href="#"><i class="fa-brands fa-facebook"></i></a>
+          </p>
+        </div>
+        <div class="footer-info">
+          <p>
+            <a href="#Inicio" data-section="footer" data-value="main"
+              ><i class="bi bi-house-up"></i> Inicio</a
+            >
+          </p>
+          <p>|</p>
+          <p>
+            <i class="bi bi-laptop"></i> Dev by
+            <a
+              href="https://www.linkedin.com/in/fredy-cespedes-06845828a/"
+              target="_blank"
+            >
+              <i class="fa-brands fa-linkedin"></i> Fredy.dev</a
+            >
+          </p>
+        </div>
+      </footer>
+    </div>
+    <script src="./info.js"></script>
+  </body>
+</html>

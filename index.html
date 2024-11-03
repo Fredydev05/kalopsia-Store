@@ -14,7 +14,7 @@
       name="description"
       content="☆⋆｡Productos sublimados personalizados°‧★"
     />
-    <meta http-equiv="X-UA-Compatible" content="IE=7">
+    <meta http-equiv="X-UA-Compatible" content="IE=7" />
     <meta name="author" content="Fredy.dev" />
     <title>Kalopsia Store</title>
     <link rel="stylesheet" href="./styles/style.css" />
@@ -28,14 +28,21 @@
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
     />
-  </head>
-
-  <body class="body-hidden" >
-
+    <script
+      src="https://kit.fontawesome.com/c794a947dc.js"
+      crossorigin="anonymous"
+    ></script>
+</head>
+<body class="body-hidden">
+    
     <div class="load-center" id="onload">
       <div class="loader">
-        <img src="./img/logo/circle-removebg-preview.png" alt="">
+        <img src="./img/logo/circle-removebg-preview.png" alt="" />
       </div>
+    </div>
+
+    <div class="progress-container">
+      <div id="progress"></div>
     </div>
 
     <section class="bienvenida" id="Inicio">
@@ -59,18 +66,37 @@
         <div class="nav-links" id="navLinks">
           <p>Idioma:</p>
           <div class="lang-responsive">
-            <button class="lang-pt" data-pt="pt"><img src="img/visuales/32px-Flag_of_Brazil.svg.png" alt=""></button>
-            <button class="lang-pt" data-pt="py"><img src="img/visuales/64px-Flag_of_Paraguay.svg.png" alt=""></button>
+            <button class="lang-pt" data-pt="pt">
+              <img src="img/visuales/32px-Flag_of_Brazil.svg.png" alt="" />
+            </button>
+            <button class="lang-pt" data-pt="py">
+              <img src="img/visuales/64px-Flag_of_Paraguay.svg.png" alt="" />
+            </button>
           </div>
           <span>|</span>
           <p>
-            <a href="#products" data-section="Section-menu-nav" data-value="Productos"><i class="bi bi-cart3"></i> Productos</a>
+            <a
+              href="#products"
+              data-section="Section-menu-nav"
+              data-value="Productos"
+              ><i class="bi bi-cart3"></i> Productos</a
+            >
           </p>
           <p>
-            <a href="#about" data-section="Section-menu-nav" data-value="Nosotros"><i class="bi bi-person"></i> Nosotros</a>
+            <a
+              href="#about"
+              data-section="Section-menu-nav"
+              data-value="Nosotros"
+              ><i class="bi bi-person"></i> Nosotros</a
+            >
           </p>
           <p>
-            <a href="#contact" data-section="Section-menu-nav" data-value="Contacto"><i class="bi bi-telephone"></i> Contacto</a>
+            <a
+              href="#contact"
+              data-section="Section-menu-nav"
+              data-value="Contacto"
+              ><i class="bi bi-telephone"></i> Contacto</a
+            >
           </p>
         </div>
       </div>
@@ -78,13 +104,42 @@
       <!-- Sección de Productos -->
       <div class="nuestros-productos">
         <div class="div-h2">
-          <p class="line" data-section="Nuestros-productos" data-value="Bienvenida">Bienvenido a Kalopsia</p>
-          <h2 data-section="Nuestros-productos" data-value="Pregunta">¿Que te gustaria ver?</h2>
+          <p
+            class="line"
+            data-section="Nuestros-productos"
+            data-value="Bienvenida"
+          >
+            Bienvenido a Kalopsia
+          </p>
+          <h2 data-section="Nuestros-productos" data-value="Pregunta">
+            ¿Que te gustaria ver?
+          </h2>
         </div>
         <div class="secciones">
-          <p><a href="#products" data-section="Nuestros-productos" data-value="Jarroncitos">Jarroncitos</a></p>
-          <p><a href="#tazas" data-section="Nuestros-productos" data-value="Tazas">Tazas</a></p>
-          <p><a href="#otros" data-section="Nuestros-productos" data-value="Otros">Otros</a></p>
+          <p>
+            <a
+              href="#products"
+              data-section="Nuestros-productos"
+              data-value="Jarroncitos"
+              >Jarroncitos</a
+            >
+          </p>
+          <p>
+            <a
+              href="#tazas"
+              data-section="Nuestros-productos"
+              data-value="Tazas"
+              >Tazas</a
+            >
+          </p>
+          <p>
+            <a
+              href="#otros"
+              data-section="Nuestros-productos"
+              data-value="Otros"
+              >Otros</a
+            >
+          </p>
         </div>
       </div>
     </section>
@@ -119,23 +174,36 @@
       </div>
     </section>
 
+    <!--Seccion 1-->
+
     <section id="products" class="carousel-section">
       <div class="carousel-title">
-        <h2 class="Nombre" data-section="carousel-section" data-value="Nombre">☆⋆｡Jarroncitos°‧★</h2>
-        <h1 class="descripcion" data-section="carousel-section" data-value="descripcion">Diseños personalizables</h1>
+        <h2 class="Nombre" data-section="carousel-section" data-value="Nombre">
+          ☆⋆｡Jarroncitos°‧★
+        </h2>
+        <h1
+          class="descripcion"
+          data-section="carousel-section"
+          data-value="descripcion"
+        >
+          Diseños personalizables
+        </h1>
         <a
           href="https://wa.me/595984439436?text=Hola%20estoy%20interesado%20en%20adquirir%20mi%20taza%20personalizada%20✨"
           class="whatsapp-btn"
           target="_blank"
         >
-          <button data-section="carousel-section" data-value="button"><i class="bi bi-whatsapp"></i> Hacer Pedido</button>
+          <button class="hacer-pedido-btn" data-section="carousel-section" data-value="button">
+            <i class="bi bi-whatsapp"></i> Hacer Pedido
+          </button>
         </a>
+        <button onclick="cargarSeccion('jarroncitos')" class="mas-informacion-btn">Más info.</button>
       </div>
       <div class="carousel">
         <div class="carousel-inner">
           <div class="carousel-item active">
             <img
-              src="img/productos/jarroncitos/jarroncito blanco.jpg"
+              src="./img/productos/jarroncitos/jarroncito blanco.jpg"
               alt="Producto 1"
             />
           </div>
@@ -187,8 +255,11 @@
             class="whatsapp-btn-2"
             target="_blank"
           >
-            <button data-section="carousel-section" data-value="button"><i class="bi bi-whatsapp"></i> Hacer Pedido</button>
+            <button class="hacer-pedido-btn-2" data-section="carousel-section" data-value="button">
+              <i class="bi bi-whatsapp"></i> Hacer Pedido
+            </button>
           </a>
+          <button class="mas-informacion-btn-2" onclick="cargarSeccion('jarroncitos')">Más info.</button>
         </div>
       </div>
     </section>
@@ -197,8 +268,18 @@
 
     <section id="tazas" class="carousel-section-2">
       <div class="carousel-title">
-        <h2 class="Nombre" data-section="carousel-section-2" data-value="Nombre">☆⋆｡Tazas°‧★</h2>
-        <h1 class="descripcion" data-section="carousel-section-2" data-value="descripcion">
+        <h2
+          class="Nombre"
+          data-section="carousel-section-2"
+          data-value="Nombre"
+        >
+          ☆⋆｡Tazas°‧★
+        </h2>
+        <h1
+          class="descripcion"
+          data-section="carousel-section-2"
+          data-value="descripcion"
+        >
           Tazas (con o sin cuchara), diseños personalizables
         </h1>
         <a
@@ -206,8 +287,11 @@
           class="whatsapp-btn"
           target="_blank"
         >
-          <button data-section="carousel-section-2" data-value="button"><i class="bi bi-whatsapp"></i> Hacer Pedido</button>
+          <button class="hacer-pedido-btn" data-section="carousel-section-2" data-value="button">
+            <i class="bi bi-whatsapp"></i> Hacer Pedido
+          </button>
         </a>
+        <button onclick="cargarSeccion('tazas')" class="mas-informacion-btn">Más info.</button>
       </div>
       <div class="carousel">
         <div class="carousel-inner-2">
@@ -251,8 +335,11 @@
             class="whatsapp-btn-2"
             target="_blank"
           >
-            <button data-section="carousel-section-2" data-value="button"><i class="bi bi-whatsapp"></i> Hacer Pedido</button>
+            <button class="hacer-pedido-btn" data-section="carousel-section-2" data-value="button">
+              <i class="bi bi-whatsapp"></i> Hacer Pedido
+            </button>
           </a>
+          <button onclick="cargarSeccion('tazas')" class="mas-informacion-btn-2">Más info.</button>
         </div>
       </div>
     </section>
@@ -261,15 +348,31 @@
 
     <section id="otros" class="carousel-section-3">
       <div class="carousel-title">
-        <h2 class="Nombre" data-section="carousel-section-3" data-value="Nombre">☆⋆｡Otro Producto°‧★</h2>
-        <h1 class="descripcion" data-section="carousel-section-3" data-value="descripcion">Descripcion de otro producto</h1>
+        <h2
+          class="Nombre"
+          data-section="carousel-section-3"
+          data-value="Nombre"
+        >
+          ☆⋆｡Otro Producto°‧★
+        </h2>
+        <h1
+          class="descripcion"
+          data-section="carousel-section-3"
+          data-value="descripcion"
+        >
+          Descripcion de otro producto
+        </h1>
         <a
           href="https://wa.me/595984439436?text=Hola%20estoy%20interesado%20en%20adquirir%20mi%20taza%20personalizada%20✨"
           class="whatsapp-btn"
           target="_blank"
         >
-          <button data-section="carousel-section-3" data-value="button"><i class="bi bi-whatsapp"></i> Hacer Pedido</button>
+          <button class="hacer-pedido-btn" data-section="carousel-section-3" data-value="button">
+            <i class="bi bi-whatsapp"></i> Hacer Pedido
+          </button>
         </a>
+        <button onclick="cargarSeccion('otros')" class="mas-informacion-btn">Más info.</button>
+
       </div>
       <div class="carousel">
         <div class="carousel-inner-3">
@@ -301,8 +404,11 @@
             class="whatsapp-btn-2"
             target="_blank"
           >
-            <button data-section="carousel-section-3" data-value="button"><i class="bi bi-whatsapp"></i> Hacer Pedido</button>
+            <button class="hacer-pedido-btn" data-section="carousel-section-3" data-value="button">
+              <i class="bi bi-whatsapp"></i> Hacer Pedido
+            </button>
           </a>
+          <button onclick="cargarSeccion('otros')" class="mas-informacion-btn-2">Más info.</button>
         </div>
       </div>
     </section>
@@ -312,17 +418,17 @@
       <h2 data-section="about" data-value="title">Sobre nosotros</h2>
       <p data-section="about" data-value="about-us">
         Kalopsia Store es tu tienda de confianza para productos de calidad.
-        Nuestro objetivo es ofrecer lo mejor para nuestros clientes. Lorem ipsum
-        dolor sit amet consectetur adipisicing elit. Cum architecto excepturi
-        vel molestias, modi eos perspiciatis dicta, quidem, esse asperiores
-        impedit magnam corporis deserunt beatae dignissimos id unde. Delectus,
-        saepe! Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed id
-        nisi neque et, quisquam, ratione, alias fugiat eos similique aliquam
-        quae dolores aspernatur facere. Facilis exercitationem quia corporis
-        voluptatibus fugit? Lorem, ipsum dolor sit amet consectetur adipisicing
-        elit. Porro, ullam quas. Dolore asperiores, qui culpa blanditiis numquam
-        veniam soluta quisquam! Quisquam reprehenderit nam nostrum alias dolor
-        nihil ex nemo consequatur.
+        Nuestro objetivo es ofrecer lo mejor para nuestros clientes. con mucha
+        experiencia y diseños y sublimaciones vel molestias, modi eos
+        perspiciatis dicta, quidem, esse asperiores impedit magnam corporis
+        deserunt beatae dignissimos id unde. Delectus, saepe! Lorem ipsum dolor
+        sit amet consectetur adipisicing elit. Sed id nisi neque et, quisquam,
+        ratione, alias fugiat eos similique aliquam quae dolores aspernatur
+        facere. Facilis exercitationem quia corporis voluptatibus fugit? Lorem,
+        ipsum dolor sit amet consectetur adipisicing elit. Porro, ullam quas.
+        Dolore asperiores, qui culpa blanditiis numquam veniam soluta quisquam!
+        Quisquam reprehenderit nam nostrum alias dolor nihil ex nemo
+        consequatur.
       </p>
     </section>
 
@@ -330,16 +436,17 @@
     <section id="contact" class="section-contact">
       <div class="info">
         <h2 data-section="Contact" data-value="Contactos">Contactos:</h2>
-        <p data-section="Contact" data-value="texto-info">Puedes contactarnos a través de los siguientes medios:</p>
+        <p data-section="Contact" data-value="texto-info">
+          Puedes contactarnos a través de los siguientes medios:
+        </p>
         <ul class="contact-info">
           <li><i class="fas fa-phone-alt"></i> +595 994 185 500</li>
           <li><i class="fas fa-envelope"></i> kalopsia@gmail.com</li>
-          <li>
-            <i class="fas fa-map-marker-alt"></i>  Ciudad Del
-            Este
-          </li>
+          <li><i class="fas fa-map-marker-alt"></i> Ciudad Del Este</li>
         </ul>
-        <h3 data-section="Contact" data-value="texto-info-2">O danos más informacion:</h3>
+        <h3 data-section="Contact" data-value="texto-info-2">
+          O danos más informacion:
+        </h3>
       </div>
       <div class="formulario">
         <form id="form" action="">
@@ -366,16 +473,31 @@
     </section>
     <!-- Pie de página -->
     <footer id="footer">
-      <p data-section="footer" data-value="copyright">&copy; Derechos reservados 2024 | Kalopsia Store</p>
+      <p data-section="footer" data-value="copyright">
+        &copy; Derechos reservados 2024 | Kalopsia Store
+      </p>
+      <div class="footer-social-link">
+        <p>
+          <a href="https://www.instagram.com/kalop_store/"
+            ><i class="fa-brands fa-instagram"></i
+          ></a>
+        </p>
+        <p>
+          <a href="#"><i class="fa-brands fa-facebook"></i></a>
+        </p>
+      </div>
       <div class="footer-info">
         <p>
-          <a href="#Inicio" data-section="footer" data-value="main" ><i class="bi bi-house-up"></i> Inicio</a>
+          <a href="#Inicio" data-section="footer" data-value="main"
+            ><i class="bi bi-house-up"></i> Inicio</a
+          >
         </p>
         <p>|</p>
         <p>
           <i class="bi bi-laptop"></i> Dev by
-          <a href="https://www.instagram.com/_fredy_7/"
-            ><i class="bi bi-instagram"></i> _fredy_7</a
+          <a href="https://www.linkedin.com/in/fredy-cespedes-06845828a/"
+            target="_blank">
+            <i class="fa-brands fa-linkedin"></i> Fredy.dev</a
           >
         </p>
       </div>
@@ -387,7 +509,13 @@
       target="_blank"
     >
       <img src="img/visuales/klipartz.com (1).png" alt="WhatsApp" />
-      <div class="floating-message" data-section="whatsapp-float" data-value="float-message">¡Chatea con nosotros!</div>
+      <div
+        class="floating-message"
+        data-section="whatsapp-float"
+        data-value="float-message"
+      >
+        ¡Chatea con nosotros!
+      </div>
     </a>
 
     <script src="main.js"></script>

@@ -21,7 +21,7 @@ function moveSlide(step) {
   updateCarousel();
 
   clearInterval(autoSlideInterval);
-  autoSlideInterval = setInterval(autoSlide, 4000);
+  autoSlideInterval = setInterval(autoSlide, 2000);
 }
 
 function autoSlide() {
@@ -70,7 +70,7 @@ function autoSlide2() {
 
 function resetAutoSlide2() {
   clearInterval(autoSlideInterval2);
-  autoSlideInterval2 = setInterval(autoSlide2, 7000);
+  autoSlideInterval2 = setInterval(autoSlide2, 2000);
 }
 
 function updateCarousel2() {
@@ -117,7 +117,7 @@ function moveSlide3(step) {
   updateCarousel3();
 
   clearInterval(autoSlideInterval3);
-  autoSlideInterval3 = setInterval(autoSlide3, 4000);
+  autoSlideInterval3 = setInterval(autoSlide3, 2000);
 }
 
 function autoSlide3() {
@@ -219,6 +219,20 @@ function toggleMenu() {
   navLinks.style.display = "flex";
 }
 
+
+//=================scroll progress=======================
+
+let docElem = document.documentElement;
+let barrita = document.querySelector("#progress")
+
+window.addEventListener("scroll", () => {
+  let winScroll = docElem.scrollTop;
+  let height = docElem.scrollHeight - docElem.clientHeight;
+
+  let scrolled = (winScroll / height) * 100;
+  barrita.style.width = scrolled + "%";
+}) 
+
 // =======================Traduccion portugues==============================
    const langButton = document.querySelectorAll("[data-pt]");
    const textToChange = document.querySelectorAll("[data-section]");
@@ -242,21 +256,8 @@ function toggleMenu() {
      });
    });
 
-   
-// const langButton = document.querySelectorAll("[data-pt]");
-// const textToChange = document.querySelectorAll("[data-section]");
 
-// langButton.forEach((button) => {
-//   button.addEventListener("click", () => {
-//     fetch(`./languages/${button.dataset.pt}.json`)
-//       .then(res => res.json())
-//       .then(data => {
-//         textToChange.forEach((el) => {
-//           const section = el.dataset.section;
-//           const value = el.dataset.value;
-
-//           el.innerHTML = data[section][value];
-//         })
-//       })
-//   })
-// })
+/*        Botones mas informacion          */ 
+function cargarSeccion(seccion) {
+  window.location.href = `mas_info.html?seccion=${seccion}`;
+}
