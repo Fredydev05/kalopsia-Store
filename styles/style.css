@@ -611,7 +611,8 @@ body {
 	font-family: "Poppins", sans-serif;
 	justify-content: space-between;
 	align-items: center;
-	padding: 50px;
+	padding: 100px 50px;
+	padding-top: 30px;
 	text-align: left;
 	background-color: #000000;
 	background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.5), black), url("../img/visuales/Walppaper.jpeg");
@@ -623,20 +624,21 @@ body {
 }
 
 .info p {
-	padding: 40px 0;
+	padding: 10px 0;
 	padding-top: 0;
 	text-align: center;
 }
 
-.info h3 {
-	padding: 40px 0px;
-	padding-bottom: 0;
-	margin-bottom: 0;
+form h3 {
+	padding: 10px 0px;
+	margin-top: 0;
 	text-align: center;
+	color: white;
 }
 
 .info h2 {
 	text-align: center;
+	margin-top: 0;
 }
 
 .info > * {
@@ -647,6 +649,7 @@ body {
 .contact-info {
 	list-style: none;
 	margin: 0;
+	margin-bottom: 20px;
 }
 
 .contact-info li {
@@ -659,6 +662,14 @@ body {
 .contact-info i {
 	margin-right: 10px;
 	color: #bbbbbb;
+}
+
+.google-api{
+	max-width: 90%;
+	height: 50dvh;
+	align-content: flex-end;
+	animation: none;
+	margin-left: 15%;
 }
 
 .formulario {
@@ -1223,7 +1234,7 @@ footer p a:hover {
 	}
 
 	.info {
-		margin-bottom: 25px;
+		margin-bottom: 60px;
 		width: auto;
 	}
 
@@ -1237,6 +1248,19 @@ footer p a:hover {
 
 	.contact-info p {
 		font-size: 14px;
+	}
+
+	.google-api{
+		max-width: 100%;
+		height: 40dvh;
+		animation: autoShow2 both;
+		animation-timeline: view(60% 5%);
+		margin-left: 0;
+	}
+
+	iframe{
+		border: 2px solid white;
+		border-radius: 5px;
 	}
 
 	footer {
@@ -1256,12 +1280,13 @@ footer p a:hover {
 
 	.footer-social-link p{
 		margin: 1rem;
+		margin-top: 0;
 	}
 
 }
 
 @media screen and (max-width: 380px) {
 	.section-contact {
-		padding: 0px;
+		padding: 15px;
 	}
 }

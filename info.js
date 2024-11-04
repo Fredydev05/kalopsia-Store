@@ -10,7 +10,6 @@ document.querySelectorAll(".zoomable").forEach((img) => {
   });
 });
 
-// Cerrar el modal al hacer clic fuera de la imagen
 modal.addEventListener("click", () => {
   modal.style.display = "none";
 });
@@ -22,7 +21,7 @@ function abrirModal(src) {
   modal.style.display = "flex";
 }
 
-// Función para cerrar el modal
+
 function cerrarModal() {
   const modal = document.getElementById("imageModal");
   modal.style.display = "none";
@@ -62,7 +61,7 @@ function cargarContenido(seccion) {
     jarroncitos: {
       titulo: "Jarroncitos",
       descripcion:
-        "Información sobre jarroncitos... lorem if aoisdfhasjdgfkaghdfkbhdcuayhoisdabkhg esto y querkadsihfaljhflah",
+        "Información sobre jarroncitos...   (click en la imagen para zoom)",
       imagenes: [
         "./img/productos/jarroncitos/jarrito gibili.jpg",
         "./img/productos/jarroncitos/jarroncito 2-1.jpg",
@@ -74,7 +73,7 @@ function cargarContenido(seccion) {
     },
     tazas: {
       titulo: "Tazas",
-      descripcion: "Información sobre tazas...",
+      descripcion: "Información sobre tazas... (click en la imagen para zoom)",
       imagenes: [
         "./img/productos/tazas/taza 1.jpg",
         "./img/productos/tazas/taza kanye 2.jpg",
@@ -87,7 +86,7 @@ function cargarContenido(seccion) {
     },
     platos: {
       titulo: "Platos",
-      descripcion: "Información sobre platos...",
+      descripcion: "Información sobre platos... (click en la imagen para zoom)",
       imagenes: [
         "./img/productos/platos/plato1.jpg",
         "./img/productos/platos/plato2.jpg",
