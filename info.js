@@ -95,11 +95,17 @@ function cargarContenido(seccion) {
     },
   };
 
+  localStorage.setItem("contenido", JSON.stringify(contenido));
+  
   // Cargar título, descripción e imágenes si existen
   if (contenido[seccion]) {
-    infoTitle.textContent = contenido[seccion].titulo;
-    infoDesc.textContent = contenido[seccion].descripcion;
-    wrapperImages.innerHTML = contenido[seccion].imagenes
+
+    let productosLS =localStorage.getItem("contenido");
+    let productos = JSON.parse(productosLS);
+
+    infoTitle.textContent = productos[seccion].titulo;
+    infoDesc.textContent = productos[seccion].descripcion;
+    wrapperImages.innerHTML = productos[seccion].imagenes
       .map(
         (img) =>
           `<div><img src="${img}" alt="Imagen de ${seccion}" class="zoomable" onclick="abrirModal('${img}')" /></div>`
