@@ -1,22 +1,4 @@
-.titulo-navbar {
-  animation: tracking-in-contract 2s ease-in-out;
-}
-@keyframes tracking-in-contract {
-  0% {
-    letter-spacing: 0.6em;
-    opacity: 0;
-  }
-  40% {
-    opacity: 0.6;
-  }
-  75% {
-    letter-spacing: -0.2rem;
-    opacity: 1;
-  }
-  100% {
-    letter-spacing: normal;
-  }
-}
+
 
 .nuestros-productos {
   animation: blur-in 2.7s ease-in-out;

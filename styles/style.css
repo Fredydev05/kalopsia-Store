@@ -183,7 +183,7 @@ body {
 	display: flex;
 	align-items: center;
 	justify-content: space-between;
-	background-image: linear-gradient(90deg, #ffffff1b 0%, rgba(0, 0, 0, 0.884) 80%), url("../img/visuales/Walppaper.jpeg");
+	background-image: linear-gradient(90deg, #ffffff00 0%, rgba(0, 0, 0, 0.884) 80%), url("../img/visuales/Walppaper.jpeg");
 	background-size: cover;
 	background-position: center;
 	background-repeat: no-repeat;
@@ -801,7 +801,7 @@ footer p a:hover {
 	height: 50px;
 	bottom: 20px;
 	right: 20px;
-	background-color: #636363;
+	background-color: #003004;
 	color: #fff;
 	border-radius: 50%;
 	text-align: center;
@@ -816,9 +816,8 @@ footer p a:hover {
 }
 
 .whatsapp-float img {
-	width: 35px;
-	padding-top: 11px;
-	filter: grayscale(100%);
+	width: 33px;
+	padding-top: 9px;
 }
 
 .whatsapp-float:hover {
@@ -845,7 +844,7 @@ footer p a:hover {
 	position: absolute;
 	right: 70px;
 	bottom: 10px;
-	background-color: #838383b0;
+	background-color: #1ebe5b;
 	color: #fff;
 	padding: 8px 13px;
 	border-radius: 20px;
