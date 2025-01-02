@@ -1,5 +1,9 @@
 @import url("https: //fonts.googleapis.com/css2?family=Montserrat: ital, wght@0, 100..900;1, 100..900&family=Poppins: ital, wght@0, 100;0, 200;0, 300;0, 400;0, 500;0, 600;0, 700;0, 800;0, 900;1, 100;1, 200;1, 300;1, 400;1, 500;1, 600;1, 700;1, 800;1, 900&display=swap");
 
+::-webkit-scrollbar {
+    display: none;
+}
+
 body {
 	padding: 0;
 	margin: 0;
@@ -58,12 +62,13 @@ body {
 	justify-content: space-between;
 	align-items: center;
 	padding: 10px;
+	padding-right: 20px;
 	width: 100%;
 	color: #fff;
 	background: transparent;
 	box-sizing: border-box;
 	box-shadow: 0px 2px 12px rgba(0, 0, 0, 0.604);
-	backdrop-filter: blur(4px);
+	/* backdrop-filter: blur(4px); */
 }
 
 .nav-links {
@@ -162,8 +167,7 @@ body {
 
 .titulo-navbar {
 	font-family: "Poppins", sans-serif;
-	font-weight: 600;
-	letter-spacing: 2px;
+	font-weight: 500;
 	margin: 0;
 	margin-left: 0.6rem;
 	position: relative;
@@ -194,6 +198,7 @@ body {
 	padding: 5rem 4rem;
 	border-top-right-radius: 10px;
 	border-bottom-right-radius: 10px;
+	background:rgba(143, 143, 143, 0.411);
 }
 
 .div-h2 p {
@@ -205,6 +210,7 @@ body {
 	font-size: 40px;
 	font-family: "Poppins", sans-serif;
 	font-weight: 400;
+	z-index: 1;
 }
 
 .us {
@@ -249,6 +255,7 @@ body {
 	color: white;
 	font-family: "Poppins", sans-serif;
 	font-size: 60px;
+	font-weight: 600;
 	padding-left: 60px;
 	text-align: center;
 	padding-bottom: 2rem;
@@ -262,7 +269,7 @@ body {
 	position: absolute;
 	width: 80%;
 	height: 4px;
-	left: 10%;
+	left: 15%;
 	border-bottom: 2px solid white;
 	bottom: 10px;
 	flex-wrap: wrap;
@@ -271,7 +278,8 @@ body {
 .text-info p {
 	color: white;
 	font-family: "Poppins", sans-serif;
-	font-size: 26px;
+	font-weight: 200;
+	font-size: 23px;
 	text-align: left;
 	padding-left: 50px;
 	flex-wrap: wrap;
@@ -294,7 +302,7 @@ body {
 	margin: 0;
 	width: fit-content;
 	font-family: "Poppins", sans-serif;
-	font-weight: 350;
+	font-size: 25px;
 	padding: 1.9rem 0.2rem;
 }
 
@@ -311,8 +319,8 @@ body {
 	position: absolute;
 	width: 0;
 	top: -5px;
-	height: 130%;
-	border: 2px solid #ffffff;
+	height: 120%;
+	border: 1.5px solid #ffffff;
 	border-radius: 15px;
 	left: -10px;
 	scale: 0;
@@ -329,7 +337,6 @@ body {
 
 .secciones p:hover {
 	letter-spacing: 4px;
-	font-size: 23px;
 }
 
 .carousel-section,
@@ -354,6 +361,10 @@ body {
 	box-sizing: border-box;
 }
 
+.carousel-title a {
+	text-decoration: none;
+}
+
 .carousel-title h2,
 .carousel-title h1 {
 	width: fit-content;
@@ -361,7 +372,7 @@ body {
 
 .Nombre {
 	font-family: "Bebas Neue", sans-serif;
-	font-size: 30px;
+	font-size: 35px;
 	letter-spacing: 1px;
 	color: rgb(255, 255, 255);
 	position: relative;
@@ -403,7 +414,7 @@ body {
 .hacer-pedido-btn-2 {
 	background-color: transparent;
 	color: white;
-	border: 2px #1ebe5b solid;
+	border: 2px #5f5f5f solid;
 	padding: 10px 20px;
 	font-size: 18px;
 	border-radius: 10px;
@@ -416,7 +427,7 @@ body {
 .mas-informacion-btn, .mas-informacion-btn-2{
 	background-color: transparent;
 	color: white;
-	border: 2px #1e5ebe solid;
+	border: 2px #5f5f5f solid;
 	padding: 10px 20px;
 	font-size: 18px;
 	border-radius: 10px;
@@ -427,9 +438,13 @@ body {
 	transition: 0.5s;
 }
 
+.mas-informacion-btn i {
+	padding-right: 5px;
+}
+
 .whatsapp-btn i,
 .whatsapp-btn-2 i{
-	padding-right: 9px;
+	padding-right: 5px;
 }
 
 .whatsapp-btn-2, .mas-informacion-btn-2 {
@@ -438,12 +453,14 @@ body {
 
 .hacer-pedido-btn:hover {
 	background-color: #1ebe5b;
+	border-color: #1ebe5b;
 	box-shadow: 0px 0px 18px #17c112;
 	scale: 1.07;
 }
 .mas-informacion-btn:hover {
 	background-color: #1e59be;
 	box-shadow: 0px 0px 18px #128dc1;
+	border-color: #1e59be;
 	scale: 1.07;
 }
 
@@ -736,7 +753,6 @@ footer {
 	background-color: #000;
 	font-family: "Poppins", sans-serif;
 	color: #fff;
-	padding: 10px;
 	padding: 0px 7rem;
 	display: flex;
 	font-size: 14px;
@@ -1014,7 +1030,7 @@ footer p a:hover {
 		left: 50%;
 		translate: -50% -50%;
 		z-index: -1;
-		padding: 3px;
+		padding: 1.5px;
 		border-radius: 10px;
 		animation: 3s spin linear infinite;
 	}
@@ -1053,7 +1069,7 @@ footer p a:hover {
 		max-width: 100%;
 		border-radius: 10px;
 		backdrop-filter: none;
-		background-color: rgba(0, 0, 0, 0);
+		background-color: rgba(255, 255, 255, 0);
 		position: relative;
 		top: -5%;
 	}
@@ -1167,6 +1183,8 @@ footer p a:hover {
 	.whatsapp-btn-2, .mas-informacion-btn-2 {
 		display: block;
 		width: fit-content;
+		font-size: 15px;
+
 	}
 
 	.pedido-container {
