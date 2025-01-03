@@ -18,7 +18,7 @@ modal.addEventListener("click", () => {
   modal.style.display = "none";
 });
 
-function abrirModal(src) {
+window.abrirModal = function abrirModal(src) {
   const modal = document.getElementById("imageModal");
   const modalImage = document.getElementById("modalImage");
   modalImage.src = src;
@@ -26,14 +26,14 @@ function abrirModal(src) {
 }
 
 
-function cerrarModal() {
+window.cerrarModal = function cerrarModal() {
   const modal = document.getElementById("imageModal");
   modal.style.display = "none";
 }
 
 //========================menu mobile===================
 
-function toggleMenu() {
+window.toggleMenu = function toggleMenu() {
   const navLinks = document.querySelector(".nav-links");
 
   if (navLinks.classList.contains("mobile-hidden")) {
