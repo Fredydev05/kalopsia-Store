@@ -44,10 +44,10 @@
       <div id="progress"></div>
     </div>
 
-<!-- Barra de navegación -->
+    <!-- Barra de navegación -->
 
     <section class="bienvenida" id="Inicio">
-      <div class="nav-bar">
+      <header class="nav-bar">
         <div class="logo">
           <a href="https://www.instagram.com/kalop_store/" target="_blank">
             <img
@@ -60,9 +60,7 @@
         </div>
         <p class="titulo-navbar">Kalopsia Store</p>
 
-        <button class="menu-btn" onclick="toggleMenu()">
-          &#9776;
-        </button>
+        <button class="menu-btn" onclick="toggleMenu()">&#9776;</button>
         <div class="nav-links" id="navLinks">
           <p>Idioma:</p>
           <div class="lang-responsive">
@@ -99,7 +97,7 @@
             >
           </p>
         </div>
-      </div>
+      </header>
 
       <!-- Sección de Productos -->
 
@@ -145,7 +143,7 @@
       </div>
     </section>
 
-<!-- Quienes Somos secc -->
+    <!-- Quienes Somos secc -->
 
     <section class="us">
       <div class="us-sec">
@@ -161,9 +159,18 @@
         </div>
       </div>
       <div class="us-image">
-        <img
+        <div class="text-marquee">
+          <div class="text-marquee-content">
+            
+            KALOPSIA KALOPSIA KALOPSIA   
+            KALOPSIA KALOPSIA KALOPSIA KALOPSIA  
+          </div>
+        </div>
+        
+        <div class="img-rotate-container">
+          <img 
           src="img/logo/Kalopsi-removebg-preview.png"
-          alt=""
+          alt="logo-png"
           class="png-logo"
         />
         <img
@@ -171,10 +178,11 @@
           alt=""
           class="png-circle"
         />
+        </div>
       </div>
     </section>
 
-<!--Seccion 1-->
+    <!--Seccion 1-->
 
     <section id="products" class="carousel-section">
       <div class="carousel-title">
@@ -188,25 +196,27 @@
         >
           Diseños personalizables
         </h1>
-        <a
-          href="https://wa.me/595994185500?text=Hola%20estoy%20interesado%20en%20adquirir%20mi%20taza%20personalizada%20✨"
-          class="whatsapp-btn"
-          target="_blank"
-        >
-          <button
-            class="hacer-pedido-btn"
-            data-section="carousel-section"
-            data-value="button"
+        <div class="pedido-container">	
+          <a
+            href="https://wa.me/595994185500?text=Hola%20estoy%20interesado%20en%20adquirir%20mi%20taza%20personalizada%20✨"
+            class="whatsapp-btn"
+            target="_blank"
           >
-            <i class="bi bi-whatsapp"></i> Hacer Pedido
+            <button
+              class="hacer-pedido-btn"
+              data-section="carousel-section"
+              data-value="button"
+            >
+              <i class="bi bi-whatsapp"></i> Hacer Pedido
+            </button>
+          </a>
+          <button
+            onclick="cargarSeccion('jarroncitos')"
+            class="mas-informacion-btn"
+          >
+            <i class="bi bi-chevron-down"></i> <span>Ver más</span>
           </button>
-        </a>
-        <button
-          onclick="cargarSeccion('jarroncitos')"
-          class="mas-informacion-btn"
-        >
-        <i class="bi bi-chevron-down"></i> Ver más
-        </button>
+        </div>
       </div>
       <div class="carousel">
         <div class="carousel-inner">
@@ -251,12 +261,12 @@
         <button class="next" onclick="moveSlide(1)">&#10095;</button>
 
         <div class="carousel-indicators">
-          <span class="dot" onclick="moveSlide(0)"></span>
           <span class="dot" onclick="moveSlide(1)"></span>
           <span class="dot" onclick="moveSlide(2)"></span>
           <span class="dot" onclick="moveSlide(3)"></span>
           <span class="dot" onclick="moveSlide(4)"></span>
           <span class="dot" onclick="moveSlide(5)"></span>
+          <span class="dot" onclick="moveSlide(6)"></span>
         </div>
         <div class="pedido-container">
           <a
@@ -276,13 +286,13 @@
             class="mas-informacion-btn-2"
             onclick="cargarSeccion('jarroncitos')"
           >
-          <i class="bi bi-chevron-down"></i> Ver más
+            <i class="bi bi-chevron-down"></i> Ver más
           </button>
         </div>
       </div>
     </section>
 
-<!--seccion 2-->
+    <!--seccion 2-->
 
     <section id="tazas" class="carousel-section-2">
       <div class="carousel-title">
@@ -300,7 +310,8 @@
         >
           Tazas (con o sin cuchara), diseños personalizables
         </h1>
-        <a
+        <div class="pedido-container">
+          <a
           href="https://wa.me/595994185500?text=Hola%20estoy%20interesado%20en%20adquirir%20mi%20taza%20personalizada%20✨"
           class="whatsapp-btn"
           target="_blank"
@@ -316,6 +327,7 @@
         <button onclick="cargarSeccion('tazas')" class="mas-informacion-btn">
           <i class="bi bi-chevron-down"></i> Ver más
         </button>
+        </div>
       </div>
       <div class="carousel">
         <div class="carousel-inner-2">
@@ -371,13 +383,13 @@
             onclick="cargarSeccion('tazas')"
             class="mas-informacion-btn-2"
           >
-            Más info.
+            <i class="bi bi-chevron-down"></i> Ver más
           </button>
         </div>
       </div>
     </section>
 
-<!--Seccion 3-->
+    <!--Seccion 3-->
 
     <!-- <section id="otros" class="carousel-section-3">
       <div class="carousel-title">
@@ -470,7 +482,7 @@
       </p>
     </section>
 
-<!-- Sección de contacto -->
+    <!-- Sección de contacto -->
 
     <section id="contact" class="section-contact">
       <div class="info">
@@ -518,7 +530,7 @@
       </div>
     </section>
 
-<!-- Pie de página -->
+    <!-- Pie de página -->
 
     <footer id="footer">
       <p data-section="footer" data-value="copyright">
@@ -553,7 +565,7 @@
       </div>
     </footer>
 
-<!-- Botón flotante de WhatsApp -->
+    <!-- Botón flotante de WhatsApp -->
 
     <a
       href="https://wa.me/595984439436?text=Hola%20estoy%20interesado%20en%20adquirir%20sus%20productos"
@@ -570,7 +582,7 @@
       </div>
     </a>
 
-    <script src="main.js"></script>
+    <script src="./JS/main.js"></script>
     <script>
       const $form = document.querySelector("#form");
       const $buttonMailto = document.querySelector("#mailto");
