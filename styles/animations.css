@@ -35,12 +35,16 @@
 }
 
 @keyframes tamanio {
-  from{
-    width: 0%;
-    height: 0%;
-  }to{
-    width: 30%;
-    height: 10%;
+  0%{
+    transform: scaleX(0);
+    opacity: 0;
+  }50%{
+    transform: scaleX(1);
+    opacity: 1;
+  }
+  100%{
+    transform: scaleX(0);
+    opacity: 0;
   }
 }
 /* section about and contact show  */
