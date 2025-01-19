@@ -25,7 +25,7 @@ function moveSlide(step) {
   updateCarousel();
 
   clearInterval(autoSlideInterval);
-  autoSlideInterval = setInterval(autoSlide, 1500);
+  autoSlideInterval = setInterval(autoSlide, 2000);
 }
 
 function autoSlide() {

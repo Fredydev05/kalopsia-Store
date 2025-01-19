@@ -705,6 +705,7 @@ form h3 {
 	list-style: none;
 	margin: 0;
 	margin-bottom: 20px;
+	margin-left: 50px;
 }
 
 .contact-info li {
@@ -791,30 +792,37 @@ textarea,
 footer {
 	background-color: #000;
 	color: #fff;
-	padding: 0px 7rem;
+	padding: 2rem 7rem;
 	display: flex;
-	font-size: 14px;
 	border-top: 1px solid white;
 	justify-content: space-between;
 	align-items: center;
 }
 
-footer p {
-	padding: 0px 10px;
+footer span {
+	padding: 10px 10px;
+	font-size: 14px;
 }
 
-footer p a {
+footer span a {
 	text-decoration: none;
 	color: white;
 	padding-left: 16px;
 	position: relative;
 }
 
-footer p a:focus {
+.footer-social-icon a { 
+	color : white;
+	padding: 1rem;
+	font-size: 20px;
+}
+
+
+footer span a:focus, .footer-social-icon a:focus  {
 	outline: none;
 }
 
-footer p a::after {
+footer span a::after, .footer-social-icon a::after {
 	content: "";
 	position: absolute;
 	bottom: -3px;
@@ -826,11 +834,11 @@ footer p a::after {
 	transition: 0.3s;
 }
 
-footer p a:hover::after {
+footer span a:hover::after, .footer-social-icon a:hover::after {
 	scale: 100%;
 }
 
-footer p a:hover {
+footer span a:hover, .footer-social-icon a:hover {
 	color: #868686;
 }
 
@@ -962,7 +970,7 @@ footer p a:hover {
 	}
 }
 
-@media screen and (max-width: 768px), (max-width: 860px) {
+@media screen and (max-width: 768px) {
 	.loader img{
 		width: 130px;
 		height: 130px;
@@ -1178,8 +1186,8 @@ footer p a:hover {
 
 	.carousel-item img,
 	.carousel-item-3 img {
-		width: 70%;
-		height: 100%;
+		width: 50%;
+		height: 90%;
 		display: block;
 		object-fit: cover;
 	}
@@ -1306,6 +1314,9 @@ footer p a:hover {
 		font-size: 14px;
 	}
 
+	.contact-info{
+		margin-left: 0;
+	}
 	.google-api{
 		max-width: 90%;
 		height: 30vh;
@@ -1334,11 +1345,26 @@ footer p a:hover {
 		margin-top: 0;
 	}
 
-	.footer-social-link p{
+	.footer-social-link {
 		margin: 1rem;
-		margin-top: 0;
 	}
 
+}
+@media  screen and (max-width: 460px){
+	.carousel-item img,
+	.carousel-item-3 img {
+		width: 70%;
+		height: 100%;
+		display: block;
+		object-fit: cover;
+	}
+
+	.carousel-item-2 img {
+		width: 70%;
+		height: 100%;
+		display: block;
+		object-fit: cover;
+	}
 }
 
 @media screen and (max-width: 380px) {
