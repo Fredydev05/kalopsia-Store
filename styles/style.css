@@ -21,13 +21,13 @@ body {
 	top: 0;
 	left: 0;
 	width: 100%;
-	background-color: #000;
+	background-color: #000000;
 	z-index: 1000;
 }
 
 #progress{
 	height: 5px;
-	background-color: white;
+	background-color: rgb(255, 255, 255);
 	width: 0;
 }
 
@@ -65,10 +65,10 @@ body {
 	padding: 10px;
 	padding-right: 20px;
 	width: 100%;
-	color: #fff;
+	color: #000000;
 	background: transparent;
 	box-sizing: border-box;
-	/* backdrop-filter: blur(4px); */
+	background-color: #00000009;
 }
 
 .nav-links {
@@ -82,7 +82,7 @@ body {
 }
 
 .nav-links p a {
-	color: #fff;
+	color: #000000;
 	text-decoration: none;
 	position: relative;
 	transition: color 0.3s ease;
@@ -106,7 +106,7 @@ body {
 }
 
 .nav-links p a:hover {
-	color: #dadada;
+	color: #000000;
 }
 
 .lang-pt{
@@ -136,7 +136,7 @@ body {
 	display: none;
 	font-size: 2rem;
 	cursor: pointer;
-	color: white;
+	color: rgb(0, 0, 0);
 }
 
 .nav-links {
@@ -150,7 +150,7 @@ body {
 	background: none;
 	border: none;
 	cursor: pointer;
-	color: white;
+	color: rgb(0, 0, 0);
 }
 
 .menu-btn:focus {
@@ -172,12 +172,11 @@ body {
 }
 
 .bienvenida {
-	background-image: linear-gradient(90deg, #ffffff11 0%, rgba(0, 0, 0, 0.884) 80%), url("../img/visuales/Walppaper.jpeg");
-	margin-bottom: 10rem;
+	background-image: /*linear-gradient(90deg, #ffffff11 0%, rgba(0, 0, 0, 0.884) 80%),*/ url("../img/visuales/prueba.jpg");
 	background-size: cover;
 	background-position: center;
 	background-repeat: no-repeat;
-	mask-image: linear-gradient(rgb(0, 0, 0) 50%, transparent);
+	/* mask-image: linear-gradient(rgb(0, 0, 0) 50%, transparent); */
 	width: 100%;
 	height: 100vh;
 }
@@ -210,12 +209,14 @@ body {
 }
 
 .us {
+	padding-top: 10rem;
 	width: 100%;
 	height: auto;
 	gap: 1rem;
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
+	background-image: linear-gradient(180deg, #ffffff 10%, transparent 20%);
 }
 
 .us-sec {
@@ -298,6 +299,7 @@ body {
 	padding-left: 60px;
 	text-align: center;
 	padding-bottom: 2rem;
+	margin-bottom: 0%;
 	position: relative;
 	animation: autoShow both;
 	animation-timeline: view(80% 5%);
@@ -328,6 +330,8 @@ body {
 
 .secciones {
 	width: 30%;
+	position: relative;
+	/* left: 70%; */
 }
 
 .nuestros-productos p {
@@ -344,7 +348,7 @@ body {
 }
 
 .secciones p a {
-	color: white;
+	color: rgb(0, 0, 0);
 	text-decoration: none;
 	position: relative;
 	transition: font-size 0.3s ease-in-out, letter-spacing 0.3s ease-in-out;
@@ -357,7 +361,7 @@ body {
 	width: 0;
 	top: -5px;
 	height: 120%;
-	border: 1.5px solid #ffffff;
+	border: 1.5px solid #000000;
 	border-radius: 15px;
 	left: -10px;
 	scale: 0;
@@ -792,7 +796,7 @@ textarea,
 footer {
 	background-color: #000;
 	color: #fff;
-	padding: 2rem 7rem;
+	padding: 1rem 7rem;
 	display: flex;
 	border-top: 1px solid white;
 	justify-content: space-between;
@@ -1006,7 +1010,7 @@ footer span a:hover, .footer-social-icon a:hover {
 		top: 100%;
 		right: 0;
 		padding: 1rem;
-		border: 2px solid white;
+		border: 2px solid rgb(0, 0, 0);
 		border-right: 0;
 		font-size: 15px;
 	}
@@ -1051,7 +1055,7 @@ footer span a:hover, .footer-social-icon a:hover {
 
 	.line {
 		position: relative;
-		background: black;
+		background: rgb(255, 255, 255);
 		border-radius: 10px;
 	}
 
@@ -1067,7 +1071,7 @@ footer span a:hover, .footer-social-icon a:hover {
 		position: absolute;
 		width: 100%;
 		height: 100%;
-		background-image: conic-gradient(from var(--angle), transparent 80%, white);
+		background-image: conic-gradient(from var(--angle), transparent 80%, rgb(0, 0, 0));
 		top: 50%;
 		left: 50%;
 		translate: -50% -50%;
@@ -1092,6 +1096,7 @@ footer span a:hover, .footer-social-icon a:hover {
 	}
 
 	.secciones {
+		left: 0%;
 		align-self: flex-start;
 		padding-left: 4rem;
 		position: relative;
@@ -1103,7 +1108,7 @@ footer span a:hover, .footer-social-icon a:hover {
 		width: 80%;
 		height: 10%;
 		top: -15%;
-		border-bottom: 2px solid white;
+		border-bottom: 2px solid rgb(0, 0, 0);
 	}
 
 	.div-h2 {
@@ -1114,6 +1119,7 @@ footer span a:hover, .footer-social-icon a:hover {
 		background-color: rgba(255, 255, 255, 0);
 		position: relative;
 		top: -5%;
+		color: #000;
 	}
 
 	.nuestros-productos h2 {
@@ -1125,6 +1131,7 @@ footer span a:hover, .footer-social-icon a:hover {
 	.us {
 		flex-direction: column;
 		max-width: 100%;
+		background-image: linear-gradient(180deg, #ffffff 0%, transparent 10%);
 	}
 
 	.text-marquee{
@@ -1144,6 +1151,7 @@ footer span a:hover, .footer-social-icon a:hover {
 
 	.text-info p {
 		max-width: 100%;
+		font-size: 18px;
 	}
 
 	.img-rotate-container {

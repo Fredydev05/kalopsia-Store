@@ -1,9 +1,61 @@
+/* Animacion de entrada estrellas que chocan con el contenedor  */
+
+document.addEventListener("DOMContentLoaded", () => {
+  const objects = document.querySelectorAll(".moving-object");
+  const container = document.querySelector(".moving-objects-container");
+
+  objects.forEach(obj => {
+    let x = Math.random() * container.clientWidth;
+    let y = Math.random() * container.clientHeight;
+    let speedX = (Math.random() - 0.5) * 4;
+    let speedY = (Math.random() - 0.5) * 4;
+    let angle = 0;
+
+    obj.style.transform = `translate(${x}px, ${y}px) rotate(${angle}deg)`;
+
+    function move() {
+      x += speedX;
+      y += speedY;
+      angle += 5;
+
+      if (x <= 0 || x + obj.clientWidth >= container.clientWidth) {
+        speedX *= -1;
+      }
+      if (y <= 0 || y + obj.clientHeight >= container.clientHeight) {
+        speedY *= -1;
+      }
+
+      obj.style.transform = `translate(${x}px, ${y}px) rotate(${angle}deg)`;
+
+      requestAnimationFrame(move);
+    }
+
+    function randomFlash() {
+      setTimeout(() => {
+        obj.classList.add("flash-effect");
+
+        setTimeout(() => {
+          obj.classList.remove("flash-effect");
+          randomFlash(); // Llamar la función otra vez para el siguiente destello
+        }, 1000); // Duración del destello
+
+      }, Math.random() * 5000 + 2000); // Espera entre 2 y 7 segundos antes de destellar
+    }
+
+    move();
+    randomFlash(); // Iniciar los destellos aleatorios
+  });
+});
+
+
+
+/* Animacion de carga de pantalla */
 window.onload = function(){   //pantalla de carga
   $('#onload').fadeOut();
   $('body').removeClass('body-hidden')
 }
 
-/**************Carousel 1 *******************/
+/**************Carousel 1 de imagenes *******************/
 
 let currentSlide = 0;
 let autoSlideInterval = 0; 
@@ -47,7 +99,7 @@ function updateCarousel() {
   });
 }
 
-/******************Nuevo Carrusel 2 ************************/
+/******************Carrousel numero 2 de productos ************************/
 
 let currentSlide2 = 0;
 let autoSlideInterval2 = 0;
@@ -103,50 +155,50 @@ window.addEventListener('resize', () => {
 
 /******************Nuevo Carrusel 3 ************************/
 
-let currentSlide3 = 0;
-let autoSlideInterval3 = 0; 
+// let currentSlide3 = 0;
+// let autoSlideInterval3 = 0; 
 
-function moveSlide3(step) {
-  const items = document.querySelectorAll(".carousel-item-3");
-  const totalSlides = items.length;
+// function moveSlide3(step) {
+//   const items = document.querySelectorAll(".carousel-item-3");
+//   const totalSlides = items.length;
 
-  if (totalSlides === 0) {
-    console.error("No carousel items found");
-    return;
-  }
+//   if (totalSlides === 0) {
+//     console.error("No carousel items found");
+//     return;
+//   }
 
-  currentSlide3 = (currentSlide3 + step + totalSlides) % totalSlides;
+//   currentSlide3 = (currentSlide3 + step + totalSlides) % totalSlides;
 
-  const carouselInner = document.querySelector(".carousel-inner-3");
-  const slideWidth = items[0].offsetWidth;
-  carouselInner.style.transform = `translateX(${
-    -currentSlide3 * slideWidth
-  }px)`;
+//   const carouselInner = document.querySelector(".carousel-inner-3");
+//   const slideWidth = items[0].offsetWidth;
+//   carouselInner.style.transform = `translateX(${
+//     -currentSlide3 * slideWidth
+//   }px)`;
 
-  updateCarousel3();
+//   updateCarousel3();
 
-  clearInterval(autoSlideInterval3);
-  autoSlideInterval3 = setInterval(autoSlide3, 2000);
-}
+//   clearInterval(autoSlideInterval3);
+//   autoSlideInterval3 = setInterval(autoSlide3, 2000);
+// }
 
-function autoSlide3() {
-  moveSlide3(1);
-}
+// function autoSlide3() {
+//   moveSlide3(1);
+// }
 
-autoSlideInterval3 = setInterval(autoSlide3, 7000);
+// autoSlideInterval3 = setInterval(autoSlide3, 7000);
 
-function updateCarousel3() {
-  const items = document.querySelectorAll(".carousel-item-3");
-  const dots = document.querySelectorAll(".dot-3");
+// function updateCarousel3() {
+//   const items = document.querySelectorAll(".carousel-item-3");
+//   const dots = document.querySelectorAll(".dot-3");
 
-  items.forEach((item, index) => {
-    item.classList.toggle("active", index === currentSlide3);
-  });
+//   items.forEach((item, index) => {
+//     item.classList.toggle("active", index === currentSlide3);
+//   });
 
-  dots.forEach((dot, index) => {
-    dot.classList.toggle("active", index === currentSlide3);
-  });
-}
+//   dots.forEach((dot, index) => {
+//     dot.classList.toggle("active", index === currentSlide3);
+//   });
+// }
 
 //=================Boton de whatsapp flotante============================
 
@@ -206,11 +258,11 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
 
-//========================menu mobile===================
+//======================== Menu hamburguesa mobile ===================
 
 function toggleMenu() {
-  const navLinks = document.querySelector(".nav-links");
 
+  const navLinks = document.querySelector(".nav-links");
 
   if (navLinks.classList.contains("mobile-hidden")) {
     navLinks.classList.remove("mobile-hidden");
@@ -228,9 +280,7 @@ function toggleMenu() {
   navLinks.style.display = "flex";
 }
 
-
 //=================scroll progress=======================
-
 let docElem = document.documentElement;
 let barrita = document.querySelector("#progress")
 
@@ -241,6 +291,7 @@ window.addEventListener("scroll", () => {
   let scrolled = (winScroll / height) * 100;
   barrita.style.width = scrolled + "%";
 }) 
+
 
 // =======================Traduccion portugues==============================
    const langButton = document.querySelectorAll("[data-pt]");
