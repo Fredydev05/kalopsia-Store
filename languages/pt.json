@@ -1,50 +1,49 @@
 {
   "Section-menu-nav": {
     "Productos": "<i class='bi bi-cart3'> Produtos",
-    "Nosotros": "<i class='bi bi-person'> Nós",
+    "Nosotros": "<i class='bi bi-person'> Sobre Nós",
     "Contacto": "<i class='bi bi-telephone'> Contato"
   },
   "Nuestros-productos": {
     "Bienvenida": "Bem-vindo à Kalopsia",
-    "Pregunta": "O que você gostaria de ver?",
-    "Jarroncitos": "Pequenos vasos",
-    "Tazas": "Copos",
+    "Pregunta": "O que você gostaria olhar?",
+    "Jarroncitos": "Vasinhos",
+    "Tazas": "Canecas",
     "Otros": "Outros"
   },
   "us": {
-    "who": "Quem somos nós?",
-    "text-info": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci alias minus provident qui mollitia architecto iure possimus saepe perspiciatis ea commodi aut doloribus, laudantium exercitationem et, veritatis natus iste accusantium?"
+    "who": "Quem somos?",
+    "text-info": "O nome surgiu com a ideia de criar coisas autênticas como o seu significado. <br /><br /> <span style='font-style: oblique; text-decoration: none; background-color: rgb(255, 255, 255); color: black;'>' Kalopsia: A ilusão de que algo é mais belo do que realmente é '</span> <br /><br />Somos uma empresa que busca transformar algo tão simples como personalizar um objeto em criar um presente especial para cada pessoa."
   },
   "carousel-section": {
-    "Nombre": "☆⋆｡Pequenos vasos°‧★",
-    "descripcion": "Layouts personalizáveis",
-    "button": "<i class='bi bi-whatsapp'></i> Fazer pedido"
+    "Nombre": "☆⋆｡Vasinhos°‧★",
+    "descripcion": "Designs personalizáveis",
+    "button": "<i class='bi bi-whatsapp'></i> Fazer Pedido"
   },
   "carousel-section-2": {
-    "Nombre": "☆⋆｡Copos°‧★",
-    "descripcion": "Copos (com ou sem colher) com designs personalizáveis",
-    "button": "<i class='bi bi-whatsapp'></i> Fazer pedido"
+    "Nombre": "☆⋆｡Canecas°‧★",
+    "descripcion": "Canecas (com ou sem colher), designs personalizáveis",
+    "button": "<i class='bi bi-whatsapp'></i> Fazer Pedido"
   },
   "carousel-section-3": {
     "Nombre": "☆⋆｡Outros Produtos°‧★",
     "descripcion": "Descrição de outro produto",
-    "button": "<i class='bi bi-whatsapp'></i> Fazer pedido"
+    "button": "<i class='bi bi-whatsapp'></i> Fazer Pedido"
   },
   "about": {
-    "title": "Sobre nós",
-    "about-us": "Kalopsia Store es tu tienda de confianza para productos de calidad.Nuestro objetivo es ofrecer lo mejor para nuestros clientes. Lorem ipsumdolor sit amet consectetur adipisicing elit. Cum architecto excepturivel molestias, modi eos perspiciatis dicta, quidem, esse asperiores impedit magnam corporis deserunt beatae dignissimos id unde. Delectus, saepe! Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed idnisi neque et, quisquam, ratione, alias fugiat eos similique aliquam quae dolores aspernatur facere. Facilis exercitationem quia corporis voluptatibus fugit? Lorem, ipsum dolor sit amet consectetur adipisicing elit. Porro, ullam quas. Dolore asperiores, qui culpa blanditiis numquam veniam soluta quisquam! Quisquam reprehenderit nam nostrum alias dolor nihil ex nemo consequatur."
+    "title": "Sobre Nós",
+    "about-us": "A Kalopsia Store é sua loja de confiança para produtos de qualidade. Nosso objetivo é oferecer o melhor para nossos clientes, com muita experiência em design e sublimação."
   },
   "Contact": {
     "Contactos": "Contatos: ",
-    "texto-info": "Você pode entrar em contato conosco através dos seguintes meios",
-    "texto-info-2": "ou nos dê mais informações"
+    "texto-info": "Você pode nos contatar pelos seguintes meios:",
+    "texto-info-2": "Ou nos envie mais informações:"
   },
   "footer": {
-    "copyright": "&copy; Direitos autorais 2024 | Kalopsia Store",
+    "copyright": "&copy; Direitos reservados 2024 | Kalopsia Store",
     "main": "<i class='bi bi-house-up'> Início"
   },
   "whatsapp-float": {
-    "float-message": "Converse conosco!"
+    "float-message": "Converse com a gente!"
   }
-  
 }
