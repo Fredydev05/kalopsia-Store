@@ -152,12 +152,12 @@
 
     <!-- Quienes Somos secc -->
 
-    <section class="us">
-      <div class="us-sec">
-        <div class="who">
-          <h2 data-section="us" data-value="who">¿Quienes Somos?</h2>
+    <section class="us ">
+      <div class="us-sec ">
+        <div class="who fade-in-box">
+          <h2 data-section="us" data-value="who ">¿Quienes Somos?</h2>
         </div>
-        <div class="text-info">
+        <div class="text-info fade-in-box">
           <p data-section="us" data-value="text-info">
             El nombre surgio con la idea de crear cosas autenticas como su
             significado. <br /><br />
@@ -184,7 +184,7 @@
           </div>
         </div>
 
-        <div class="img-rotate-container">
+        <div class="img-rotate-container ">
           <img
             src="img/logo/Kalopsi-removebg-preview.png"
             alt="logo-png"
@@ -202,8 +202,8 @@
     <!--Seccion 1-->
 
     <section id="products" class="carousel-section">
-      <div class="carousel-title">
-        <h2 class="Nombre" data-section="carousel-section" data-value="Nombre">
+      <div class="carousel-title fade-in-box">
+        <h2 class="Nombre " data-section="carousel-section" data-value="Nombre">
           ☆⋆｡Jarroncitos°‧★
         </h2>
         <h1
@@ -235,7 +235,7 @@
           </button>
         </div>
       </div>
-      <div class="carousel">
+      <div class="carousel ">
         <div class="carousel-inner">
           <div class="carousel-item active">
             <img
@@ -644,6 +644,72 @@
         });
       });
     </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+
+    <script>
+      const directions = {
+        "top-left": { x: -80, y: -80 },
+        "top-right": { x: 80, y: -80 },
+        "bottom-left": { x: -80, y: 80 },
+        "bottom-right": { x: 80, y: 80 },
+      };
+    
+      const boxes = document.querySelectorAll(".fade-in-box");
+    
+      boxes.forEach((box) => {
+        const keys = Object.keys(directions);
+        const randomKey = keys[Math.floor(Math.random() * keys.length)];
+        const { x, y } = directions[randomKey];
+    
+        // Guarda la dirección aleatoria en el dataset
+        box.dataset.x = x;
+        box.dataset.y = y;
+    
+        // Posición inicial fuera de pantalla
+        gsap.set(box, {
+          opacity: 0,
+          x,
+          y,
+          filter: "blur(10px)",
+        });
+      });
+    
+      const observer = new IntersectionObserver(
+        (entries) => {
+          entries.forEach((entry) => {
+            const el = entry.target;
+            const x = parseFloat(el.dataset.x);
+            const y = parseFloat(el.dataset.y);
+    
+            if (entry.isIntersecting) {
+              gsap.to(el, {
+                opacity: 1,
+                x: 0,
+                y: 0,
+                filter: "blur(0px)",
+                duration: 1,
+                ease: "power3.out",
+              });
+            } else {
+              gsap.to(el, {
+                opacity: 0,
+                x,
+                y,
+                filter: "blur(10px)",
+                duration: 1,
+                ease: "power3.in",
+              });
+            }
+          });
+        },
+        {
+          threshold: 0.1,
+        }
+      );
+    
+      boxes.forEach((box) => observer.observe(box));
+    </script>
+    
     
   </body>
 </html>

@@ -1,3 +1,13 @@
+
+
+.fade-in-box {
+  opacity: 0;
+  filter: blur(10px);
+  transition: all 0.8s ease;
+  position: relative;
+  will-change: transform, opacity, filter;
+}
+
 /* Contenedor de los objetos en movimiento */
 .moving-objects-container {
   position: absolute;
