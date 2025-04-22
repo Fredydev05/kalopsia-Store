@@ -168,14 +168,14 @@ body {
   background-repeat: no-repeat;
   /* mask-image: linear-gradient(rgb(0, 0, 0) 50%, transparent); */
   width: 100%;
-  height: 100dvh;
+  height: 100vh;
 }
 
 .nuestros-productos {
   margin: 0;
   color: #fff;
   width: 100%;
-  height: 100dvh;
+  height: 100vh;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -1187,7 +1187,7 @@ footer span a:hover,
   .img-rotate-container {
     flex-direction: column;
     width: 100vw;
-    height: 50dvh;
+    height: 50vh;
     position: relative;
     overflow: hidden;
   }
