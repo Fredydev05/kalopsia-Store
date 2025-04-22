@@ -139,7 +139,7 @@ function updateCarousel2() {
 }
 
 window.addEventListener('load', () => {
-  resetAutoSlide2(); // Iniciar el auto-slide después de la carga
+  resetAutoSlide2(); 
 });
 
 window.addEventListener('resize', () => {

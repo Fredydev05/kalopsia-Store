@@ -1,4 +1,12 @@
 
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
 
 .fade-in-box {
   opacity: 0;
@@ -224,100 +232,5 @@
 @media screen and (max-width: 768px) {
   .titulo-navbar {
     animation: none;
-  }
-}
-/* decoracion del logo, sin uso
-.titulo-navbar::before {
-  content: "";
-  position: absolute;
-  left: -7px;
-  width: 17%;
-  height: 35%;
-  border-top: 1.5px solid rgb(255, 255, 255);
-  border-left: 1.5px solid rgb(255, 255, 255);
-  top: 5px;
-}
-
-.titulo-navbar::after {
-  content: "";
-  position: absolute;
-  right: 0;
-  width: 39%;
-  height: 1px;
-  border-bottom: 1.5px solid rgb(255, 255, 255);
-  bottom: 7px;
-}*/
-
-/* Animation of menu buttons */
-
-
-
-/* Animacion de entrada boton menu */
-
-@-webkit-keyframes scale-in-ver-top {
-  0% {
-    -webkit-transform: scaleY(0);
-    transform: scaleY(0);
-    -webkit-transform-origin: 100% 0%;
-    transform-origin: 100% 0%;
-    opacity: 1;
-  }
-  100% {
-    -webkit-transform: scaleY(1);
-    transform: scaleY(1);
-    -webkit-transform-origin: 100% 0%;
-    transform-origin: 100% 0%;
-    opacity: 1;
-  }
-}
-@keyframes scale-in-ver-top {
-  0% {
-    -webkit-transform: scaleY(0);
-    transform: scaleY(0);
-    -webkit-transform-origin: 100% 0%;
-    transform-origin: 100% 0%;
-    opacity: 1;
-  }
-  100% {
-    -webkit-transform: scaleY(1);
-    transform: scaleY(1);
-    -webkit-transform-origin: 100% 0%;
-    transform-origin: 100% 0%;
-    opacity: 1;
-  }
-}
-
-/* Animacion de salida boton menu */
-
-@-webkit-keyframes scale-out-ver-top {
-  0% {
-    -webkit-transform: scaleY(1);
-    transform: scaleY(1);
-    -webkit-transform-origin: 100% 0%;
-    transform-origin: 100% 0%;
-    opacity: 1;
-  }
-  100% {
-    -webkit-transform: scaleY(0);
-    transform: scaleY(0);
-    -webkit-transform-origin: 100% 0%;
-    transform-origin: 100% 0%;
-    opacity: 1;
-  }
-}
-@keyframes scale-out-ver-top {
-  0% {
-    -webkit-transform: scaleY(1);
-    transform: scaleY(1);
-    -webkit-transform-origin: 100% 0%;
-    transform-origin: 100% 0%;
-    opacity: 1;
-  }
-  100% {
-    -webkit-transform: scaleY(0);
-    transform: scaleY(0);
-    -webkit-transform-origin: 100% 0%;
-    transform-origin: 100% 0%;
-    opacity: 1;
   }
 }

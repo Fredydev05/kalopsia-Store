@@ -1,4 +1,4 @@
-@import url("https: //fonts.googleapis.com/css2?family=Montserrat: ital, wght@0, 100..900;1, 100..900&family=Poppins: ital, wght@0, 100;0, 200;0, 300;0, 400;0, 500;0, 600;0, 700;0, 800;0, 900;1, 100;1, 200;1, 300;1, 400;1, 500;1, 600;1, 700;1, 800;1, 900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat: ital, wght@0, 100..900;1, 100..900&family=Poppins: ital, wght@0, 100;0, 200;0, 300;0, 400;0, 500;0, 600;0, 700;0, 800;0, 900;1, 100;1, 200;1, 300;1, 400;1, 500;1, 600;1, 700;1, 800;1, 900&display=swap");
 
 ::-webkit-scrollbar {
   display: none;
@@ -40,15 +40,6 @@ body {
   width: 200px;
   height: 200px;
   animation: spin 2s linear infinite;
-}
-
-@keyframes spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
 }
 
 .nav-bar {
@@ -162,11 +153,10 @@ body {
 }
 
 .bienvenida {
-  background-image: /*linear-gradient(90deg, #ffffff11 0%, rgba(0, 0, 0, 0.884) 80%),*/ url("../img/visuales/prueba.jpg");
+  background-image: url("../img/visuales/prueba.jpg");
+  display: flex;
   background-size: cover;
   background-position: center;
-  background-repeat: no-repeat;
-  /* mask-image: linear-gradient(rgb(0, 0, 0) 50%, transparent); */
   width: 100%;
   height: 100vh;
 }
@@ -185,7 +175,7 @@ body {
   padding: 5rem 4rem;
   border-top-right-radius: 10px;
   border-bottom-right-radius: 10px;
-  background: rgba(143, 143, 143, 0.411);
+  background: rgba(126, 126, 126, 0.582);
 }
 
 .div-h2 p {
@@ -228,8 +218,6 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  /*animation: autoShow2 both;
-  animation-timeline: view(60% 5%);*/
 }
 
 .png-logo,
@@ -293,8 +281,6 @@ body {
   padding-bottom: 2rem;
   margin-bottom: 0%;
   position: relative;
-  /*animation: autoShow both;
-  animation-timeline: view(80% 5%);*/
 }
 
 .who h2::before {
@@ -316,14 +302,11 @@ body {
   padding-left: 50px;
   flex-wrap: wrap;
   width: 50%;
-  /*animation: autoShow both;
-  animation-timeline: view(90% 5%);*/
 }
 
 .secciones {
   width: 30%;
   position: relative;
-  /* left: 70%; */
 }
 
 .nuestros-productos p {
@@ -383,12 +366,6 @@ body {
   padding: 2rem;
   padding-top: 5rem;
   padding-bottom: 5rem;
-  background-image: linear-gradient(
-      to right,
-      rgba(0, 0, 0, 0.822),
-      rgba(0, 0, 0, 0.658)
-    ),
-    url("../img/visuales/Walppaper.jpeg");
   background-size: cover;
 }
 
@@ -414,8 +391,6 @@ body {
   letter-spacing: 1px;
   color: rgb(255, 255, 255);
   position: relative;
-  /*animation: autoShow both;
-  animation-timeline: view(60% 5%);*/
 }
 
 .descripcion {
@@ -424,8 +399,6 @@ body {
   color: rgb(255, 255, 255);
   line-height: 1.4em;
   position: relative;
-  /*animation: autoShow both;
-  animation-timeline: view(60% 5%);*/
 }
 
 .descripcion::before {
@@ -521,8 +494,6 @@ body {
   max-width: 100%;
   margin: 0 0;
   overflow: hidden;
-  /*animation: autoShow2 both;
-  animation-timeline: view(80% 5%);*/
 }
 
 .carousel-inner-3 {
@@ -637,14 +608,14 @@ body {
   color: #fff;
   padding: 100px 50px;
   text-align: center;
-  background-color: #f5f5f5;
+  background-color: #ffffff;
   filter: grayscale(100%);
   background-image: url("../img/visuales/download (1).jpeg");
   background-size: cover;
   position: sticky;
   top: 0;
   height: 100vh;
-  transform: translateZ(0); /* Mejora el rendimiento en móviles */
+  transform: translateZ(0); 
   z-index: -1;
   background-position: center;
   overflow-x: hidden;
@@ -657,7 +628,7 @@ body {
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(0, 0, 0, 0.7);
+  background-color: rgba(0, 0, 0, 0.788);
   z-index: 1;
 }
 
@@ -665,8 +636,7 @@ body {
   position: relative;
   z-index: 2;
   color: white;
-  /*animation: autoShow2 both;
-  animation-timeline: view(60% 5%);*/
+  font-size: x-large
 }
 
 .section-contact {
@@ -978,19 +948,11 @@ footer span a:hover,
 }
 
 @media screen and (max-width: 768px) {
-  .loader img {
-    width: 130px;
-    height: 130px;
-    animation: spinload 2s linear infinite;
+
+  .bienvenida{
+    background-position: -50px 220px;
   }
-  @keyframes spinload {
-    from {
-      transform: rotate(0deg);
-    }
-    to {
-      transform: rotate(360deg);
-    }
-  }
+
   .nav-bar {
     width: 100%;
     align-items: center;
@@ -1003,6 +965,7 @@ footer span a:hover,
     display: block;
     margin-left: auto;
     margin: 0;
+    padding: 0;
   }
 
   /* Sidebar oculto inicialmente */
@@ -1077,53 +1040,6 @@ footer span a:hover,
     padding-top: 0;
     width: 100%;
   }
-
-  .line {
-    position: relative;
-    background: rgb(255, 255, 255);
-    border-radius: 10px;
-  }
-
-  @property --angle {
-    syntax: "<angle>";
-    initial-value: 0deg;
-    inherits: false;
-  }
-
-  .line::after,
-  .line::before {
-    content: "";
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    background-image: conic-gradient(
-      from var(--angle),
-      transparent 80%,
-      rgb(0, 0, 0)
-    );
-    top: 50%;
-    left: 50%;
-    translate: -50% -50%;
-    z-index: -1;
-    padding: 1.5px;
-    border-radius: 10px;
-    animation: 3s spin linear infinite;
-  }
-
-  .line::before {
-    filter: blur(1.5rem);
-  }
-
-  @keyframes spin {
-    from {
-      --angle: 0deg;
-    }
-
-    to {
-      --angle: 360deg;
-    }
-  }
-
   .secciones {
     left: 0%;
     align-self: flex-start;
@@ -1359,8 +1275,6 @@ footer span a:hover,
   .google-api {
     max-width: 90%;
     height: 30vh;
-    /*animation: autoShow2 both;
-    animation-timeline: view(60% 5%);*/
     margin-left: 0;
   }
 
