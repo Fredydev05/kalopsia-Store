@@ -4,6 +4,10 @@
 	display: none;
 }
 
+header, section{
+  overflow-x: hidden;
+}
+
 body {
   padding: 0;
   margin: 0;
@@ -650,6 +654,7 @@ body {
   transform: translateZ(0); /* Mejora el rendimiento en móviles */
   z-index: -1;
   background-position: center;
+  overflow-x: hidden;
 }
 
 .section-about::before {
