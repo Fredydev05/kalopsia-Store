@@ -49,11 +49,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
 
-/* Animacion de carga de pantalla */
-window.onload = function(){   //pantalla de carga
-  $('#onload').fadeOut();
-  $('body').removeClass('body-hidden')
-}
+
 
 /**************Carousel 1 de imagenes *******************/
 

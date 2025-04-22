@@ -1,6 +1,4 @@
-
 import { contenido } from "./productos.js";
-
 
 // Seleccionar el modal y la imagen
 const modal = document.getElementById("imageModal");
@@ -23,13 +21,12 @@ window.abrirModal = function abrirModal(src) {
   const modalImage = document.getElementById("modalImage");
   modalImage.src = src;
   modal.style.display = "flex";
-}
-
+};
 
 window.cerrarModal = function cerrarModal() {
   const modal = document.getElementById("imageModal");
   modal.style.display = "none";
-}
+};
 
 //========================menu mobile===================
 
@@ -50,7 +47,7 @@ window.toggleMenu = function toggleMenu() {
   }
 
   navLinks.style.display = "flex";
-}
+};
 
 /*                Objetos de mas informacion            */
 
@@ -58,17 +55,15 @@ const params = new URLSearchParams(window.location.search);
 const seccion = params.get("seccion");
 
 function cargarContenido(seccion) {
-  
   const wrapperImages = document.querySelector(".wrapper-images");
   const infoTitle = document.querySelector(".info-title");
   const infoDesc = document.querySelector(".info-desc");
   const infoSubDesc = document.querySelector(".info-subdesc");
 
   localStorage.setItem("contenido", JSON.stringify(contenido));
-  
+
   // Cargar título, descripción e imágenes si existen
   if (contenido[seccion]) {
-
     let productosLS = localStorage.getItem("contenido");
     let productos = JSON.parse(productosLS);
 
