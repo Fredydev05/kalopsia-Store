@@ -256,25 +256,19 @@ document.addEventListener('DOMContentLoaded', () => {
 
 //======================== Menu hamburguesa mobile ===================
 
-function toggleMenu() {
+const menuBtn = document.querySelector('.menu-btn');
+  const navLinks = document.getElementById('navLinks');
 
-  const navLinks = document.querySelector(".nav-links");
+  menuBtn.addEventListener('click', () => {
+    navLinks.classList.toggle('open');
+  });
 
-  if (navLinks.classList.contains("mobile-hidden")) {
-    navLinks.classList.remove("mobile-hidden");
-    navLinks.classList.add("mobile-visible");
-  } else {
-    navLinks.classList.remove("mobile-visible");
-    navLinks.classList.add("mobile-hidden");
-
-    navLinks.addEventListener("animationend", function handleAnimationEnd() {
-      navLinks.style.display = "none";
-      navLinks.removeEventListener("animationend", handleAnimationEnd);
-    });
-  }
-
-  navLinks.style.display = "flex";
-}
+  // Opcional: cerrar menú al hacer clic fuera
+  document.addEventListener('click', (e) => {
+    if (!navLinks.contains(e.target) && !menuBtn.contains(e.target)) {
+      navLinks.classList.remove('open');
+    }
+  });
 
 //=================scroll progress=======================
 let docElem = document.documentElement;
