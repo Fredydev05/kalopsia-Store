@@ -640,6 +640,7 @@ body {
 }
 
 .section-contact {
+  box-shadow: 0px -40px 80px #000;
   margin-top: 8rem;
   display: flex;
   justify-content: space-between;
