@@ -497,6 +497,8 @@ body {
 }
 
 .carousel-inner-3 {
+  transition: transform 0.3s ease;
+  will-change: transform;
   display: flex;
   width: 400%;
   flex-wrap: nowrap;
@@ -504,15 +506,21 @@ body {
 }
 
 .carousel-inner {
+  transition: transform 0.3s ease;
+  will-change: transform;
   display: flex;
   flex-wrap: nowrap;
   transition: transform 1s ease-in-out;
   width: 600%;
+  cursor: pointer;
 }
 
 .carousel-inner-2 {
+  transition: transform 0.3s ease;
+  will-change: transform;
   display: flex;
   transition: transform 1s ease-in-out;
+  cursor: pointer;
   width: 100%;
 }
 
@@ -576,24 +584,16 @@ body {
   position: absolute;
   top: 50%;
   transform: translatey(-50%);
-  background-color: rgba(0, 0, 0, 0.5);
+  background-color: transparent;
   color: white;
   border: none;
   border-radius: 3px;
   padding: 0.5rem 1rem 0.5rem 1rem;
   margin: 1rem;
-  cursor: pointer;
   font-size: 2rem;
   transition: 0.5s;
 }
 
-.prev:hover,
-.next:hover {
-  box-shadow: 0 0 14px rgb(212, 212, 212);
-  background-color: rgba(255, 255, 255, 0.589);
-  color: rgba(0, 0, 0, 0.589);
-  scale: 1.2;
-}
 
 .prev {
   left: 0;

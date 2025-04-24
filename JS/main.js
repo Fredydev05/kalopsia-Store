@@ -14,133 +14,233 @@ const stars = document.querySelectorAll('.moving-object');
     star.style.animationDelay = `${Math.random() * 5}s`;
     star.style.animationDuration = `${3 + Math.random() * 2}s`;
   });
-/**************Carousel 1 de imagenes *******************/
+ 
+/*--------------------------- Carousel 1 de imagenes -----------------------------*/
 
 let currentSlide = 0;
-let autoSlideInterval = 0; 
+let autoSlideInterval = null;
 
-function moveSlide(step) {
-  const items = document.querySelectorAll(".carousel-item");
-  const totalSlides = items.length;
-  if (totalSlides === 0) {
-    console.error("No carousel items found");
-    return;
-  }
+const carouselInner = document.querySelector(".carousel-inner");
+const items = document.querySelectorAll(".carousel-item");
+const totalSlides = items.length;
+const slideWidth = items[0].offsetWidth;
 
-  currentSlide = (currentSlide + step + totalSlides) % totalSlides;
+let startX = 0;
+let currentX = 0;
+let isDragging = false;
+let animationFrame;
+let isMouse = false;
 
-  const carouselInner = document.querySelector(".carousel-inner");
-  const slideWidth = items[0].offsetWidth;
-  carouselInner.style.transform = `translateX(${-currentSlide * slideWidth}px)`;
+function setTranslateX(x) {
+  carouselInner.style.transition = 'none';
+  carouselInner.style.transform = `translateX(${x}px)`;
+}
 
+function animateToSlide(index) {
+  currentSlide = index;
+  carouselInner.style.transition = 'transform 0.3s ease';
+  carouselInner.style.transform = `translateX(${-index * slideWidth}px)`;
   updateCarousel();
-
-  clearInterval(autoSlideInterval);
-  autoSlideInterval = setInterval(autoSlide, 2000);
+  resetAutoSlide();
 }
-
-function autoSlide() {
-  moveSlide(1);
-}
-
-autoSlideInterval = setInterval(autoSlide, 7000);
 
 function updateCarousel() {
-  const items = document.querySelectorAll(".carousel-item");
   const dots = document.querySelectorAll(".dot");
-
-  items.forEach((item, index) => {
-    item.classList.toggle("active", index === currentSlide);
-  });
-
   dots.forEach((dot, index) => {
     dot.classList.toggle("active", index === currentSlide);
   });
-
-  // SWIPE SUPPORT
-let xStart = null;
-let xEnd = null;
-
-const carouselInner = document.querySelector(".carousel-inner");
-
-carouselInner.addEventListener("touchstart", (e) => {
-  xStart = e.touches[0].clientX;
-});
-
-carouselInner.addEventListener("touchmove", (e) => {
-  xEnd = e.touches[0].clientX;
-});
-
-carouselInner.addEventListener("touchend", () => {
-  if (xStart !== null && xEnd !== null) {
-    const xDiff = xStart - xEnd;
-    if (Math.abs(xDiff) > 50) {
-      if (xDiff > 0) {
-        moveSlide(1); // Swipe left
-      } else {
-        moveSlide(-1); // Swipe right
-      }
-    }
-  }
-  xStart = null;
-  xEnd = null;
-});
-
 }
+
+function autoSlide() {
+  if (currentSlide < totalSlides - 1) {
+    animateToSlide(currentSlide + 1);
+  } else {
+    animateToSlide(0);
+  }
+}
+
+function resetAutoSlide() {
+  clearInterval(autoSlideInterval);
+  autoSlideInterval = setInterval(autoSlide, 7000);
+}
+
+// COMÚN (TOUCH + MOUSE)
+function onDragStart(x) {
+  startX = x;
+  currentX = x;
+  isDragging = true;
+  cancelAnimationFrame(animationFrame);
+  carouselInner.style.transition = 'none';
+}
+
+function onDragMove(x) {
+  if (!isDragging) return;
+  const deltaX = x - startX;
+  const translateX = -currentSlide * slideWidth + deltaX;
+  setTranslateX(translateX);
+  currentX = x;
+}
+
+function onDragEnd() {
+  if (!isDragging) return;
+  isDragging = false;
+
+  const delta = currentX - startX;
+
+  if (Math.abs(delta) > slideWidth / 4) {
+    if (delta < 0 && currentSlide < totalSlides - 1) {
+      animateToSlide(currentSlide + 1);
+    } else if (delta > 0 && currentSlide > 0) {
+      animateToSlide(currentSlide - 1);
+    } else {
+      animateToSlide(currentSlide);
+    }
+  } else {
+    animateToSlide(currentSlide);
+  }
+}
+
+// TOUCH EVENTS
+carouselInner.addEventListener("touchstart", (e) => onDragStart(e.touches[0].clientX), { passive: true });
+carouselInner.addEventListener("touchmove", (e) => {
+  onDragMove(e.touches[0].clientX);
+  e.preventDefault();
+}, { passive: false });
+carouselInner.addEventListener("touchend", () => onDragEnd());
+
+// MOUSE EVENTS
+carouselInner.addEventListener("mousedown", (e) => {
+  isMouse = true;
+  onDragStart(e.clientX);
+});
+
+window.addEventListener("mousemove", (e) => {
+  if (!isMouse) return;
+  onDragMove(e.clientX);
+});
+
+window.addEventListener("mouseup", () => {
+  if (!isMouse) return;
+  isMouse = false;
+  onDragEnd();
+});
+
+animateToSlide(0);
+resetAutoSlide();
+
 
 /******************Carrousel numero 2 de productos ************************/
 
 let currentSlide2 = 0;
-let autoSlideInterval2 = 0;
+let autoSlideInterval2 = null;
 
-function moveSlide2(step) {
-  const items = document.querySelectorAll(".carousel-item-2");
-  const totalSlides = items.length;
+const carouselInner2 = document.querySelector(".carousel-inner-2");
+const items2 = document.querySelectorAll(".carousel-item-2");
+const totalSlides2 = items2.length;
+const slideWidth2 = items2[0].offsetWidth;
 
-  currentSlide2 = (currentSlide2 + step + totalSlides) % totalSlides;
+let startX2 = 0;
+let currentX2 = 0;
+let isDragging2 = false;
+let animationFrame2;
+let isMouse2 = false;
 
-  const carouselInner = document.querySelector(".carousel-inner-2");
-  const slideWidth = items[0].offsetWidth;
+function setTranslateX2(x) {
+  carouselInner2.style.transition = 'none';
+  carouselInner2.style.transform = `translateX(${x}px)`;
+}
 
-  carouselInner.style.transform = `translateX(${-currentSlide2 * slideWidth}px)`;
-
+function animateToSlide2(index) {
+  currentSlide2 = index;
+  carouselInner2.style.transition = 'transform 0.3s ease';
+  carouselInner2.style.transform = `translateX(${-index * slideWidth2}px)`;
   updateCarousel2();
-
   resetAutoSlide2();
 }
 
+function updateCarousel2() {
+  const dots2 = document.querySelectorAll(".dot-2");
+  dots2.forEach((dot2, index) => {
+    dot2.classList.toggle("active", index === currentSlide2);
+  });
+}
+
 function autoSlide2() {
-  moveSlide2(1); 
+  if (currentSlide2 < totalSlides2 - 1) {
+    animateToSlide2(currentSlide2 + 1);
+  } else {
+    animateToSlide2(0);
+  }
 }
 
 function resetAutoSlide2() {
   clearInterval(autoSlideInterval2);
-  autoSlideInterval2 = setInterval(autoSlide2, 2000);
+  autoSlideInterval2 = setInterval(autoSlide2, 7000);
 }
 
-function updateCarousel2() {
-  const items = document.querySelectorAll(".carousel-item-2");
-  const dots = document.querySelectorAll(".dot-2");
-
-  items.forEach((item, index) => {
-    item.classList.toggle("active", index === currentSlide2);
-  });
-
-  dots.forEach((dot, index) => {
-    dot.classList.toggle("active", index === currentSlide2);
-  });
+// COMÚN (TOUCH + MOUSE)
+function onDragStart2(x) {
+  startX2 = x;
+  currentX2 = x;
+  isDragging2 = true;
+  cancelanimationFrame2(animationFrame2);
+  carouselInner2.style.transition = 'none';
 }
 
-window.addEventListener('load', () => {
-  resetAutoSlide2(); 
+function onDragMove2(x) {
+  if (!isDragging2) return;
+  const deltaX2 = x - startX2;
+  const translateX2 = -currentSlide2 * slideWidth2 + deltaX2;
+  setTranslateX2(translateX2);
+  currentX2 = x;
+}
+
+function onDragEnd2() {
+  if (!isDragging2) return;
+  isDragging2 = false;
+
+  const delta2 = currentX2 - startX2;
+
+  if (Math.abs(delta2) > slideWidth2 / 4) {
+    if (delta2 < 0 && currentSlide2 < totalSlides2 - 1) {
+      animateToSlide2(currentSlide2 + 1);
+    } else if (delta2 > 0 && currentSlide2 > 0) {
+      animateToSlide2(currentSlide2 - 1);
+    } else {
+      animateToSlide2(currentSlide2);
+    }
+  } else {
+    animateToSlide2(currentSlide2);
+  }
+}
+
+// TOUCH EVENTS
+carouselInner2.addEventListener("touchstart", (e) => onDragStart2(e.touches[0].clientX), { passive: true });
+carouselInner2.addEventListener("touchmove", (e) => {
+  onDragMove2(e.touches[0].clientX);
+  e.preventDefault();
+}, { passive: false });
+carouselInner2.addEventListener("touchend", () => onDragEnd2());
+
+// MOUSE EVENTS
+carouselInner2.addEventListener("mousedown", (e) => {
+  isMouse2 = true;
+  onDragStart2(e.clientX);
 });
 
-window.addEventListener('resize', () => {
-  const carouselInner = document.querySelector(".carousel-inner-2");
-  const slideWidth = document.querySelector(".carousel-item-2").offsetWidth;
-
-  carouselInner.style.transform = `translateX(${-currentSlide2 * slideWidth}px)`;
+window.addEventListener("mousemove", (e) => {
+  if (!isMouse2) return;
+  onDragMove2(e.clientX);
 });
+
+window.addEventListener("mouseup", () => {
+  if (!isMouse2) return;
+  isMouse2 = false;
+  onDragEnd2();
+});
+
+animateToSlide2(0);
+resetAutoSlide2();
 
 /******************Nuevo Carrusel 3 ************************/
 
