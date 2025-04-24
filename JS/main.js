@@ -56,6 +56,36 @@ function updateCarousel() {
   dots.forEach((dot, index) => {
     dot.classList.toggle("active", index === currentSlide);
   });
+
+  // SWIPE SUPPORT
+let xStart = null;
+let xEnd = null;
+
+const carouselInner = document.querySelector(".carousel-inner");
+
+carouselInner.addEventListener("touchstart", (e) => {
+  xStart = e.touches[0].clientX;
+});
+
+carouselInner.addEventListener("touchmove", (e) => {
+  xEnd = e.touches[0].clientX;
+});
+
+carouselInner.addEventListener("touchend", () => {
+  if (xStart !== null && xEnd !== null) {
+    const xDiff = xStart - xEnd;
+    if (Math.abs(xDiff) > 50) {
+      if (xDiff > 0) {
+        moveSlide(1); // Swipe left
+      } else {
+        moveSlide(-1); // Swipe right
+      }
+    }
+  }
+  xStart = null;
+  xEnd = null;
+});
+
 }
 
 /******************Carrousel numero 2 de productos ************************/
