@@ -183,7 +183,7 @@ function onDragStart2(x) {
   startX2 = x;
   currentX2 = x;
   isDragging2 = true;
-  cancelanimationFrame2(animationFrame2);
+  cancelAnimationFrame(animationFrame2);
   carouselInner2.style.transition = 'none';
 }
 
