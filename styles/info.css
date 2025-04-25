@@ -10,7 +10,7 @@ body {
 }
 
 body{
-    background-image: url("../img/visuales/prueba.jpg");
+    background-image:linear-gradient(rgba(0, 0, 0, 0.664), rgba(0, 0, 0, 0.685)), url("../img/visuales/prueba.jpg");
     background-repeat: repeat;
     font-family: 'Poppins', sans-serif;
 }
@@ -25,20 +25,20 @@ main{
 
 
 .info-title{
-    color: rgb(0, 0, 0);
+    color: rgb(255, 255, 255);
     text-align: center;
     padding-top: 4rem;
 }
 
 .info-desc{
-    color: rgb(0, 0, 0);
+    color: rgb(255, 255, 255);
     padding: 1.5rem 3rem;
     padding-bottom: 0   ;
     text-align: center;
 }
 
 .info-subdesc{
-    color: rgb(0, 0, 0);
+    color: rgb(255, 255, 255);
     display: flex;
     padding: 1.5rem;
     padding-bottom: 0;
